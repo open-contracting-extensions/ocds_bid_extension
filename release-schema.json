@@ -33,7 +33,7 @@
             "value":{
                 "title":"Value",
                 "description":"The value for the measure in question. Total counts should be provided as an integer. Percentages should be presented as a proportion of 1 (e.g. 10% = 0.1)",
-                "type":["float","null"]
+                "type":["number","null"]
             },
             "notes": {
                 "title":"Notes",
