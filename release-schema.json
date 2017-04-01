@@ -85,7 +85,7 @@
             "array"
           ],
           "items": {
-            "$ref": "#/definitions/bidStatistics"
+            "$ref": "#/definitions/BidsStatistic"
           }
         },
         "details": {
