@@ -1,4 +1,5 @@
-## Bid statistics and details
+Bid statistics and details
+==========================
 
 Information on bids submitted as part of a contracting process is important for many forms of analysis, including:
 
@@ -12,40 +13,42 @@ The OCDS bid extension introduces a new, flexible, top-level section to each con
 
 ### Bid Statistics
 
-The ```bids/bidStatistics``` array can block can be used to represent key statistical information about the number of bids and bidders. Each entry in the array is a ```BidStatistic``` object containing at least:
+The ```bids/bidStatistics``` array can be used to represent key statistical information about the number of bids and bidders. Each entry in the array is a ```BidStatistic``` object containing at least:
 
-* An identifier
-* A measure, from the bidStatistics codelist
-* A value for that measure
+* An identifier;
+* A measure, from the bidStatistics codelist;
+* A value for that measure;
 
-| Category | Code                | Title                                     | Description                                                                                                                                | Min                                                                                                     | Max | Required by |    | 
-|----------|---------------------|-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|-----|-------------|----| 
-| bids     | requests            | Requests to Participate                   | The total number of unique requests to participate received                                                                                |                                                                                                         |     | EU          |    | 
-| bids     | bids                | Bids                                      | The total number of unique bids received (prior to any being discounted for not meeting essential criteria).                               |                                                                                                         |     | EU          |    | 
-| bids     | validBids           | Valid Bids                                | "The total number of unique bids received that were considered valid against relevant criteria (either of the bidder or the bid submission itself). All valid bids should be consider during the tender evaluation stage. " |     |             |    | 
-| bidders  | bidders             | Bidders                                   | The total number of unique organiastions or consortia submitting bids  (prior to any being discounted for not meeting essential criteria). |                                                                                                         |     |             |    | 
-| bidders  | qualifiedBidders    | Qualified Bidders                         | The total number of unique organiastions or consortia passing the qualification stage of the evaluation process.                           |                                                                                                         |     |             |    | 
-| bidders  | disqualifiedBidders | Disqualified Bidders                      | The total number of unique organiastions or consortia that did not pass the qualification stage of the evaluation process.                 |                                                                                                         |     |             |    | 
-| EU       | electronicBids      | Electronic Bids                           | The number of bids received by electronic means.                                                                                           |                                                                                                         |     | EU          |    | 
-| EU       | smeBids             | Bids from SMEs                            | The number of bids received from Small and Medium Sized Enterprises                                                                        |                                                                                                         |     | EU          |    | 
-| EU       | foreignBids         | Bids from Foreign Firms                   | The number of bids received from bidders from outside the country where the tender is issued.                                              |                                                                                                         |     | EU          |    | 
-| EU       | foreignBidsFromEU   | Bids from firms in other EU Member States | "The number of bids received from bidders from outside the country where the tender is issued  but based within an EU Member State."                                                                  |     |             | EU | 
-| EU |tendersAbnormallyLow | Tenders excluded because they were abnormally low | The number of tenders excluded because they were abnormally low. Note that in some EU datasets this may have been converted from a boolean, such that a value of 1 would indicate '1 or more' tenders were excluded. Users should evalute and interpret data accordingly. | |             | EU | 
-
-### Bid Detail
-
-The ```bids/details``` array is used to provide one or more ```Bid``` objects, each representing a unique bid received. 
-
-### ToDo
-
-* [ ] Demonstrate mapping between ```bid/details``` and statistics;
-* [ ] Distinguish between bids for qualification, and bids at a later round of the process;
-* [ ] Ensure all EU-required bidding parameters have been captured
-
-### Schema 
+#### Bid Statistics Schema 
 
 ```eval_rst
 .. extensiontable::
    :extension: bids
+   :exclude_definitions: Bids Bid
 ```
 
+#### Bid Statistics Codelists
+
+This is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code. 
+
+For example, publishers may wish to add statistics on minority or women owned businesses, or bids that meet certain environmental standards and targets. 
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/en/extensions/codelists/bidStatistics.csv
+```
+
+### Bid details
+
+The ```bids/details``` array is used to provide one or more ```Bid``` objects, each representing a unique bid received. 
+
+```eval_rst
+.. extensiontable::
+   :extension: bids
+   :exclude_definitions: BidStatistics
+```
+
+### Example
+
+ToDo
