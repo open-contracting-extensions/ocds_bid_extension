@@ -27,7 +27,7 @@ The ```bids/bidStatistics``` array can be used to represent key statistical info
    :exclude_definitions: Bids Bid
 ```
 
-#### Bid Statistics Codelists
+#### Bid Statistics Codelist
 
 This is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code. 
 
@@ -47,6 +47,14 @@ The ```bids/details``` array is used to provide one or more ```Bid``` objects, e
 .. extensiontable::
    :extension: bids
    :exclude_definitions: statistics BidsStatistic 
+```
+
+#### Bid Status Codelist
+
+```eval_rst
+.. csv-table::
+   :header-rows: 1
+   :file: standard/docs/en/extensions/codelists/bidStatus.csv
 ```
 
 ### Example
