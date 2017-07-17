@@ -40,7 +40,7 @@
         },
         "date": {
           "title": "Date",
-          "description": "The date when this statistic was last updated. This is often the closing date of the tender process. This field can be left blank unless either (a) the same statistic is provided from multiple points in time, or (b) there is a specific local requirement for the data when statistics were calculated to be provided.",
+          "description": "The date when this statistic was last updated. This is often the closing date of the tender process. This field can be left blank unless either (a) the same statistic is provided from multiple points in time, or (b) there is a specific local requirement for the date when statistics were calculated to be provided.",
           "type": [
             "string",
             "null"
