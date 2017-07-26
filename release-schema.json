@@ -42,7 +42,7 @@
         },
         "measure": {
           "title": "Measure",
-          "description": "An item from the bidStatistics codelist for the statisic reported in value. This is an open codelist, and other statistics may also be included.",
+          "description": "An item from the bidStatistics codelist for the statistic reported in value. This is an open codelist, and other statistics may also be included.",
           "type": [
             "string",
             "null"
@@ -179,7 +179,7 @@
           "items": {
             "$ref": "#/definitions/RequirementResponse"
           },
-          "unqiueItems": true
+          "uniqueItems": true
         }
       }
     }
