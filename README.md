@@ -54,7 +54,7 @@ The ```bids/details``` array is used to provide one or more ```Bid``` objects, e
 ```eval_rst
 .. csv-table::
    :header-rows: 1
-   :file: standard/docs/en/extensions/codelists/bidStatus.csv
+   :file: codelists_translated/bidStatus.csv
 ```
 
 ### Example
