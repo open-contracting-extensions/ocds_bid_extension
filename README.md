@@ -1,5 +1,4 @@
-Bid statistics and details
-==========================
+# Bid statistics and details
 
 Information on bids submitted as part of a contracting process is important for many forms of analysis, including:
 
@@ -11,7 +10,7 @@ Regulatory regimes vary on the extent to which they allow information on bidding
 
 The OCDS bid extension introduces a new, flexible, top-level section to each contracting process to capture bidding information. Implementers will need to assess which fields are applicable to their local regulatory regime, and to local use-cases.
 
-### Bid Statistics
+## Bid Statistics
 
 The ```bids/bidStatistics``` array can be used to represent key statistical information about the number of bids and bidders. Each entry in the array is a ```BidsStatistic``` object containing at least:
 
@@ -19,7 +18,7 @@ The ```bids/bidStatistics``` array can be used to represent key statistical info
 * A measure, from the bidStatistics codelist;
 * A value for that measure;
 
-#### Bid Statistics Schema 
+### Bid Statistics Schema
 
 ```eval_rst
 .. extensiontable::
@@ -27,11 +26,11 @@ The ```bids/bidStatistics``` array can be used to represent key statistical info
    :exclude_definitions: Bids Bid
 ```
 
-#### Bid Statistics Codelist
+### Bid Statistics Codelist
 
-This is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code. 
+This is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code.
 
-For example, publishers may wish to add statistics on minority or women owned businesses, or bids that meet certain environmental standards and targets. 
+For example, publishers may wish to add statistics on minority or women owned businesses, or bids that meet certain environmental standards and targets.
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -39,17 +38,17 @@ For example, publishers may wish to add statistics on minority or women owned bu
    :file: codelists_translated/bidStatistics.csv
 ```
 
-### Bid details
+## Bid details
 
-The ```bids/details``` array is used to provide one or more ```Bid``` objects, each representing a unique bid received. 
+The ```bids/details``` array is used to provide one or more ```Bid``` objects, each representing a unique bid received.
 
 ```eval_rst
 .. extensiontable::
    :extension: bids
-   :exclude_definitions: statistics BidsStatistic 
+   :exclude_definitions: statistics BidsStatistic
 ```
 
-#### Bid Status Codelist
+### Bid Status Codelist
 
 ```eval_rst
 .. csv-table-no-translate::
@@ -57,6 +56,6 @@ The ```bids/details``` array is used to provide one or more ```Bid``` objects, e
    :file: codelists_translated/bidStatus.csv
 ```
 
-### Example
+## Example
 
 ToDo
