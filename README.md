@@ -66,13 +66,13 @@ Below is an example of a bids extension:
 		"statistics": [{
 			"id": "1.0",
 			"measure": "validBids",
-			"value": 1000,
+			"value": 1,
 			"date": "2016-12-09T01:00:00+01:00",
 			"notes": "This statistic covers the total number of unique bids received that were considered valid against relevant criteria."
 		}, {
 			"id": "2.0",
 			"measure": "disqualifiedBids",
-			"value": 1500,
+			"value": 1,
 			"date": "2016-12-10T01:00:00+01:00",
 			"notes": "This statistic covers the total number of unique bids received that were disqualified."
 		}],
