@@ -56,6 +56,78 @@ The ```bids/details``` array is used to provide one or more ```Bid``` objects, e
    :file: codelists_translated/bidStatus.csv
 ```
 
+## Example
+
+Below is an example of a bid extension:
+
+```json
+"bids": {
+                "details": [
+                    {
+                        "id": "1.0",
+                        "date": "2016-12-09T01:00:00+01:00",
+                        "status": "valid",
+                        "documents": [
+                            {
+                                "id": "1.0",
+                                "documentType": "evaluationReports",
+                                "title": "Mega Consortium Bid Evaluation Report",
+                                "description": "This document provides details of the evaluation of the bid submitted by Mega Consortium",
+                                "url": "http://communications.gov.example/example_ppp/evaluationReport_megaConsortium.pdf",
+                                "datePublished": "2016-11-17T10:00:00-06:00",
+                                "format": "application/pdf",
+                                "language": "en",
+                                "author": "Ministry of Communications"
+                            }
+                        ],
+                        "tenderers": [
+                            {
+                                "id": "MEGA",
+                                "name": "Mega Consortium"
+                            }
+                        ],
+                        "requirementResponses": [
+                            {
+                                "id": "1.0",
+                                "requirement": {
+                                    "id": "1.0",
+                                    "title": "Minimum Coverage"
+                                },
+                                "title": "Bid Coverage",
+                                "description": "Mega Consortium proposes a total coverage level of 92.2%",
+                                "value": "0.922"
+                            }
+                        ]
+                    }
+                ],
+                "statistics": [
+                    {
+                        "id": "1.0",
+                        "measure": "validBids",
+                        "value": 1
+                    },
+                    {
+                        "id": "2.0",
+                        "measure": "bidders",
+                        "value": 1
+                    },
+                    {
+                        "id": "3.0",
+                        "measure": "qualifiedBidders",
+                        "value": 1
+                    },
+                    {
+                        "id": "4.0",
+                        "measure": "disqualifiedBidders",
+                        "value": 1
+                    }
+                ]
+            },
+            "awards": [
+                 {"relatedBid": ""}
+				 ]
+```
+
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
