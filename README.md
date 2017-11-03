@@ -58,22 +58,42 @@ The ```bids/details``` array is used to provide one or more ```Bid``` objects, e
 
 ## Example
 
-Below is an example of a bid extension:
+Below is an example of a bids extension:
 
 ```json
 "bids": {
-                "details": [
+                "statistics": [
+							{
+								"id": "1.0",
+								"measure": "validBids",
+								"value": 1000,
+								"date": "2016-12-09T01:00:00+01:00",
+								"notes": "This statistic covers the total number of unique bids received that were considered valid against relevant criteria."
+							},
+							{
+								"id": "2.0",
+								"measure": "disqualifiedBids",
+								"value": 1500,
+								"date": "2016-12-10T01:00:00+01:00",
+								"notes": "This statistic covers the total number of unique bids received that were disqualified."
+							}
+							],
+				"details": [
                     {
                         "id": "1.0",
                         "date": "2016-12-09T01:00:00+01:00",
                         "status": "valid",
+						"value": {
+									"amount": 1000,
+									"currency": "USD"
+									},
                         "documents": [
                             {
                                 "id": "1.0",
                                 "documentType": "evaluationReports",
                                 "title": "Mega Consortium Bid Evaluation Report",
                                 "description": "This document provides details of the evaluation of the bid submitted by Mega Consortium",
-                                "url": "http://communications.gov.example/example_ppp/evaluationReport_megaConsortium.pdf",
+                                "url": "communications.gov.example/example_ppp/evaluationReport_megaConsortium.pdf",
                                 "datePublished": "2016-11-17T10:00:00-06:00",
                                 "format": "application/pdf",
                                 "language": "en",
@@ -86,46 +106,50 @@ Below is an example of a bid extension:
                                 "name": "Mega Consortium"
                             }
                         ],
-                        "requirementResponses": [
+                        
+                    },
+					{
+                        "id": "2.0",
+                        "date": "2016-12-10T01:00:00+01:00",
+                        "status": "disqualified",
+						"value": {
+									"amount": 1500,
+									"currency": "USD"
+									},
+                        "documents": [
                             {
                                 "id": "1.0",
-                                "requirement": {
-                                    "id": "1.0",
-                                    "title": "Minimum Coverage"
-                                },
-                                "title": "Bid Coverage",
-                                "description": "Mega Consortium proposes a total coverage level of 92.2%",
-                                "value": "0.922"
+                                "documentType": "evaluationReports",
+                                "title": "Beta Consortium Bid Evaluation Report",
+                                "description": "This document provides details of the evaluation of the bid submitted by Beta Consortium",
+                                "url": "communications.gov.example/example_ppp/evaluationReport_betaConsortium.pdf",
+                                "datePublished": "2016-11-18T10:00:00-06:00",
+                                "format": "application/pdf",
+                                "language": "en",
+                                "author": "Ministry of Communications"
                             }
-                        ]
-                    }
-                ],
-                "statistics": [
-                    {
-                        "id": "1.0",
-                        "measure": "validBids",
-                        "value": 1
-                    },
-                    {
-                        "id": "2.0",
-                        "measure": "bidders",
-                        "value": 1
-                    },
-                    {
-                        "id": "3.0",
-                        "measure": "qualifiedBidders",
-                        "value": 1
-                    },
-                    {
-                        "id": "4.0",
-                        "measure": "disqualifiedBidders",
-                        "value": 1
+                        ],
+                        "tenderers": [
+                            {
+                                "id": "BETA",
+                                "name": "Beta Consortium"
+                            }
+                        ],
+                        
                     }
                 ]
+               
             },
-            "awards": [
-                 {"relatedBid": ""}
-				 ]
+"awards": [
+                 {	
+					"id": "111",
+                    "title": "Example PPP contract award",
+                    "description": "Award of Example PPP contract to Mega Consortium",
+                    "status": "active",
+                    "date": "2016-12-17T10:00:00-06:00",
+					"relatedBid": "1.0"
+				 }
+		]
 ```
 
 ## Issues
