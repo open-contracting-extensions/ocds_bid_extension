@@ -61,8 +61,9 @@ The ```bids/details``` array is used to provide one or more ```Bid``` objects, e
 Below is an example of a bids extension:
 
 ```json
-"bids": {
-	"statistics": [{
+{
+	"bids": {
+		"statistics": [{
 			"id": "1.0",
 			"measure": "validBids",
 			"value": 1000,
@@ -74,9 +75,8 @@ Below is an example of a bids extension:
 			"value": 1500,
 			"date": "2016-12-10T01:00:00+01:00",
 			"notes": "This statistic covers the total number of unique bids received that were disqualified."
-		}
-	],
-	"details": [{
+		}],
+		"details": [{
 			"id": "1.0",
 			"date": "2016-12-09T01:00:00+01:00",
 			"status": "valid",
@@ -85,23 +85,20 @@ Below is an example of a bids extension:
 				"currency": "USD"
 			},
 			"documents": [{
-					"id": "1.0",
-					"documentType": "evaluationReports",
-					"title": "Mega Consortium Bid Evaluation Report",
-					"description": "This document provides details of the evaluation of the bid submitted by Mega Consortium",
-					"url": "communications.gov.example/example_ppp/evaluationReport_megaConsortium.pdf",
-					"datePublished": "2016-11-17T10:00:00-06:00",
-					"format": "application/pdf",
-					"language": "en",
-					"author": "Ministry of Communications"
-				}
-			],
+				"id": "1.0",
+				"documentType": "evaluationReports",
+				"title": "Mega Consortium Bid Evaluation Report",
+				"description": "This document provides details of the evaluation of the bid submitted by Mega Consortium",
+				"url": "communications.gov.example/example_ppp/evaluationReport_megaConsortium.pdf",
+				"datePublished": "2016-11-17T10:00:00-06:00",
+				"format": "application/pdf",
+				"language": "en",
+				"author": "Ministry of Communications"
+			}],
 			"tenderers": [{
-					"id": "MEGA",
-					"name": "Mega Consortium"
-				}
-			],
-
+				"id": "MEGA",
+				"name": "Mega Consortium"
+			}]
 		}, {
 			"id": "2.0",
 			"date": "2016-12-10T01:00:00+01:00",
@@ -111,36 +108,32 @@ Below is an example of a bids extension:
 				"currency": "USD"
 			},
 			"documents": [{
-					"id": "1.0",
-					"documentType": "evaluationReports",
-					"title": "Beta Consortium Bid Evaluation Report",
-					"description": "This document provides details of the evaluation of the bid submitted by Beta Consortium",
-					"url": "communications.gov.example/example_ppp/evaluationReport_betaConsortium.pdf",
-					"datePublished": "2016-11-18T10:00:00-06:00",
-					"format": "application/pdf",
-					"language": "en",
-					"author": "Ministry of Communications"
-				}
-			],
+				"id": "1.0",
+				"documentType": "evaluationReports",
+				"title": "Beta Consortium Bid Evaluation Report",
+				"description": "This document provides details of the evaluation of the bid submitted by Beta Consortium",
+				"url": "communications.gov.example/example_ppp/evaluationReport_betaConsortium.pdf",
+				"datePublished": "2016-11-18T10:00:00-06:00",
+				"format": "application/pdf",
+				"language": "en",
+				"author": "Ministry of Communications"
+			}],
 			"tenderers": [{
-					"id": "BETA",
-					"name": "Beta Consortium"
-				}
-			],
+				"id": "BETA",
+				"name": "Beta Consortium"
+			}]
+		}]
 
-		}
-	]
-
-},
-"awards": [{
+	},
+	"awards": [{
 		"id": "111",
 		"title": "Example PPP contract award",
 		"description": "Award of Example PPP contract to Mega Consortium",
 		"status": "active",
 		"date": "2016-12-17T10:00:00-06:00",
 		"relatedBid": "1.0"
-	}
-]
+	}]
+}
 ```
 
 ## Issues
