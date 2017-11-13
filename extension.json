@@ -1,6 +1,14 @@
 {
-  "name": "Bid statistics and details",
-  "description": "Allowing bid statistics, and detailed bid information to be represented.",
-  "compatibility": ">=1.1.0",
-  "dependencies": []
+  "name": {
+    "en": "Bid statistics and details"
+  },
+  "description": {
+    "en": "Allowing bid statistics, and detailed bid information to be represented."
+  },
+  "compatibility": [
+    "1.1"
+  ],
+  "documentationUrl": {
+    "en": "https://github.com/open-contracting/ocds_bid_extension"
+  }
 }
