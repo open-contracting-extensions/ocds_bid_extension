@@ -171,15 +171,6 @@
             "$ref": "#/definitions/Document"
           },
           "uniqueItems": true
-        },
-        "requirementResponses": {
-          "title": "Requirement responses",
-          "description": "If the requirements extension is also in use, the detailed responses of this bid to the tender requirements can be specified here.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/RequirementResponse"
-          },
-          "uniqueItems": true
         }
       }
     }
