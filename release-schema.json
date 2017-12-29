@@ -11,7 +11,7 @@
       "properties": {
         "relatedBid": {
           "title": "Related bid",
-            "description": "Where bid details are used, a cross reference to the entry in the bids array to which this award relates. Provide the bid identifier here.",
+          "description": "Where bid details are used, a cross reference to the entry in the bids array to which this award relates. Provide the bid identifier here.",
           "type": [
             "string",
             "null"
@@ -145,7 +145,15 @@
             "null"
           ],
           "codelist": "bidStatus.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "enum": [
+            "invited",
+            "pending",
+            "valid",
+            "disqualified",
+            "withdrawn",
+            null
+          ]
         },
         "tenderers": {
           "title": "Tenderer",
