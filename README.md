@@ -12,7 +12,7 @@ The OCDS bid extension introduces a new, flexible, top-level section to each con
 
 ## Bid Statistics
 
-The ```bids/bidStatistics``` array can be used to represent key statistical information about the number of bids and bidders. Each entry in the array is a ```BidsStatistic``` object containing at least:
+The `bids/bidStatistics` array can be used to represent key statistical information about the number of bids and bidders. Each entry in the array is a `BidsStatistic` object containing at least:
 
 * An identifier;
 * A measure, from the bidStatistics codelist;
@@ -40,7 +40,7 @@ For example, publishers may wish to add statistics on minority or women owned bu
 
 ## Bid details
 
-The ```bids/details``` array is used to provide one or more ```Bid``` objects, each representing a unique bid received.
+The `bids/details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
 
 ```eval_rst
 .. extensiontable::
