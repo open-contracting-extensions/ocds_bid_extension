@@ -1,1 +1,1 @@
-Category,Code,Title,Description,invited,Invited,,pending,Pending,,valid,Valid,,disqualified,Disqualified,,withdrawn,Withdrawn,
+Category,Code,Title,Description,invited,Invited,A bid has been invited from the listed tenderer(s).,pending,Pending,A bid has been submitted but not yet evaluated.,valid,Valid,A bid has been submitted and meets the requirements in order to be evaluated.,disqualified,Disqualified,The submitted bid did not meet the qualification requirements and so will not be evaluated.,withdrawn,Withdrawn,The submitted bid was withdrawn by the tenderer(s).
