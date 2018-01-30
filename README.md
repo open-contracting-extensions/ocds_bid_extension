@@ -142,6 +142,8 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
+### v1.1.3
+
 * Disallow required fields `BidsStatistic.id`, `BidsStatistic.measure`, `BidsStatistic.value` from being null
 * Disallow `Bids.statistics` from having null in its array of objects
 * Allow `Bids.statistics` to be null
