@@ -9,7 +9,7 @@
     "1.1"
   ],
   "documentationUrl": {
-    "en": "https://github.com/open-contracting/ocds_bid_extension"
+    "en": "http://standard.open-contracting.org/1.1/en/extensions/bids/"
   },
   "codelists": [
     "bidStatistics.csv",
