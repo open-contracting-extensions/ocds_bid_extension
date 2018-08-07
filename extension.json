@@ -14,5 +14,8 @@
   "codelists": [
     "bidStatistics.csv",
     "bidStatus.csv"
+  ],
+  "schemas": [
+    "release-schema.json"
   ]
 }
