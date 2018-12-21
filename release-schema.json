@@ -93,9 +93,6 @@
           "title": "Bid details",
           "description": "An array of bids, providing information on the bidders, and where applicable, bid status, bid values and related documents. The extent to which this information can be disclosed varies from jurisdiction to jurisdiction.",
           "type": "array",
-          "required": [
-            "id"
-          ],
           "items": {
             "$ref": "#/definitions/Bid"
           }

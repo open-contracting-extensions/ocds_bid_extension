@@ -142,6 +142,11 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
+### v1.1.4
+
+* Add `foreignBidsFromNonEU` code to `bidStatistics.csv`
+* Remove invalid `required` property on array field `Bids.details`
+
 ### v1.1.3
 
 * Disallow required fields `BidsStatistic.id`, `BidsStatistic.measure`, `BidsStatistic.value` from being null
