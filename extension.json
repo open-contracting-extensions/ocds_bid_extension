@@ -6,7 +6,7 @@
     "en": "Allowing bid statistics, and detailed bid information to be represented."
   },
   "documentationUrl": {
-    "en": "http://standard.open-contracting.org/1.1/en/extensions/bids/"
+    "en": "https://extensions.open-contracting.org/en/extensions/bids/"
   },
   "compatibility": [
     "1.1"
