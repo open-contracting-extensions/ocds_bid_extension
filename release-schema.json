@@ -81,10 +81,7 @@
         "statistics": {
           "title": "Statistics",
           "description": "Summary statistics on the number and nature of bids received. Where information is provided on individual bids, these statistics should match those that can be calculated from the bid details array.",
-          "type": [
-            "array",
-            "null"
-          ],
+          "type": "array",
           "items": {
             "$ref": "#/definitions/BidsStatistic"
           }
@@ -144,10 +141,7 @@
         "tenderers": {
           "title": "Tenderer",
           "description": "The party, or parties, responsible for this bid. This should provide a name and identifier, cross-referenced to an entry in the parties array at the top level of the release.",
-          "type": [
-            "array",
-            "null"
-          ],
+          "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
           }

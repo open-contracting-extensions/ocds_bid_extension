@@ -146,6 +146,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 * Add `foreignBidsFromNonEU` code to `bidStatistics.csv`
 * Remove invalid `required` property on array field `Bids.details`
+* Fix the merge behavior of `Bids.statistics` and `Bid.tenderers` to use identifier merge strategy
 
 ### v1.1.3
 
