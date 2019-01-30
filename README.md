@@ -10,51 +10,21 @@ Regulatory regimes vary on the extent to which they allow information on bidding
 
 The OCDS bid extension introduces a new, flexible, top-level section to each contracting process to capture bidding information. Implementers will need to assess which fields are applicable to their local regulatory regime, and to local use-cases.
 
-## Bid Statistics
-
-The `bids/bidStatistics` array can be used to represent key statistical information about the number of bids and bidders. Each entry in the array is a `BidsStatistic` object containing at least:
-
-* An identifier;
-* A measure, from the bidStatistics codelist;
-* A value for that measure;
-
-```eval_rst
-.. extensiontable::
-   :extension: bids
-   :definitions: BidsStatistic
-```
-
-### Bid Statistics Codelist
-
-This is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code.
-
-For example, publishers may wish to add statistics on minority or women owned businesses, or bids that meet certain environmental standards and targets.
-
-The codelist's Category column indicates whether the statistic applies to bids or bidders or whether it is specified or required by a particular regulatory context (e.g. EU).
-
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :file: ../../../../build/codelists/current_lang/bidStatistics.csv
-```
-
-## Bid Details
+## Schema
 
 The `bids/details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
 
-```eval_rst
-.. extensiontable::
-   :extension: bids
-   :definitions: Bid
-```
+The `bids/statistics` array is used to represent key statistical information about the number of bids and bidders. Each entry in the array is a `BidsStatistic` object containing at least:
 
-### Bid Status Codelist
+* An identifier
+* A measure, from the `bidStatistics.csv` codelist
+* A value for that measure
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :file: ../../../../build/codelists/current_lang/bidStatus.csv
-```
+The `bidStatistics.csv` codelist is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code.
+
+For example, publishers may wish to add statistics on minority or women-owned businesses, or bids that meet certain environmental standards and targets.
+
+The codelist's Category column indicates whether the statistic applies to bids or bidders or whether it is specified or required by a particular regulatory context (e.g. EU).
 
 ## Example
 
