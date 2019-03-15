@@ -8,6 +8,6 @@ bidders,disqualifiedBidders,Disqualified bidders,The total number of unique orga
 EU,electronicBids,Electronic bids,The number of bids received by electronic means.
 EU,smeBids,Bids from SMEs,The number of bids received from small and medium-sized enterprises.
 EU,foreignBids,Bids from foreign firms,The number of bids received from bidders from outside the country where the tender is issued.
-EU,foreignBidsFromEU,Bids from firms in other European Single Market countries,The number of bids received from tenderers from other European Single Market countries.
-EU,foreignBidsFromNonEU,Bids from firms in non-European Single Market countries,The number of bids received from tenderers from non-European Single Market countries.
+EU,foreignBidsFromEU,Bids from firms in other European Economic Area countries,The number of bids received from tenderers from other European Economic Area countries.
+EU,foreignBidsFromNonEU,Bids from firms in non-European Economic Area countries,The number of bids received from tenderers from non-European Economic Area countries.
 EU,tendersAbnormallyLow,Tenders excluded because they were abnormally low,"The number of tenders excluded because they were abnormally low. Note that in some EU datasets this may have been converted from a boolean, such that a value of 1 would indicate '1 or more' tenders were excluded. Users should evaluate and interpret data accordingly."

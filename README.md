@@ -114,7 +114,8 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### v1.1.4
 
-* Add `foreignBidsFromNonEU` code to `bidStatistics.csv`
+* Fix the title and description of the 'foreignBidsFromEU' code to refer to the European Economic Area (EEA). Previously, its title referred to the European Single Market, but its description listed the members of the EEA.
+* Add a 'foreignBidsFromNonEU' code to `bidStatistics.csv`
 * Remove invalid `required` property on array field `Bids.details`
 * Fix the merge behavior of `Bids.statistics` and `Bid.tenderers` to use identifier merge strategy
 * Remove Sphinx directives from readme
