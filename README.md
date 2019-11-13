@@ -35,14 +35,14 @@ Below is an example of a bids extension:
   "bids": {
     "statistics": [
       {
-        "id": "1.0",
+        "id": "1",
         "measure": "validBids",
         "value": 1,
         "date": "2016-12-09T01:00:00+01:00",
         "notes": "This statistic covers the total number of unique bids received that were considered valid against relevant criteria."
       },
       {
-        "id": "2.0",
+        "id": "2",
         "measure": "disqualifiedBids",
         "value": 1,
         "date": "2016-12-10T01:00:00+01:00",
@@ -51,7 +51,7 @@ Below is an example of a bids extension:
     ],
     "details": [
       {
-        "id": "1.0",
+        "id": "1",
         "date": "2016-12-09T01:00:00+01:00",
         "status": "valid",
         "value": {
@@ -60,15 +60,14 @@ Below is an example of a bids extension:
         },
         "documents": [
           {
-            "id": "1.0",
+            "id": "1",
             "documentType": "evaluationReports",
             "title": "Mega Consortium Bid Evaluation Report",
             "description": "This document provides details of the evaluation of the bid submitted by Mega Consortium",
             "url": "http://communications.gov.example/example_ppp/evaluationReport_megaConsortium.pdf",
             "datePublished": "2016-11-17T10:00:00-06:00",
             "format": "application/pdf",
-            "language": "en",
-            "author": "Ministry of Communications"
+            "language": "en"
           }
         ],
         "tenderers": [
@@ -79,7 +78,7 @@ Below is an example of a bids extension:
         ]
       },
       {
-        "id": "2.0",
+        "id": "2",
         "date": "2016-12-10T01:00:00+01:00",
         "status": "disqualified",
         "value": {
@@ -88,15 +87,14 @@ Below is an example of a bids extension:
         },
         "documents": [
           {
-            "id": "1.0",
+            "id": "1",
             "documentType": "evaluationReports",
             "title": "Beta Consortium Bid Evaluation Report",
             "description": "This document provides details of the evaluation of the bid submitted by Beta Consortium",
             "url": "http://communications.gov.example/example_ppp/evaluationReport_betaConsortium.pdf",
             "datePublished": "2016-11-18T10:00:00-06:00",
             "format": "application/pdf",
-            "language": "en",
-            "author": "Ministry of Communications"
+            "language": "en"
           }
         ],
         "tenderers": [
@@ -115,7 +113,7 @@ Below is an example of a bids extension:
       "description": "Award of Example PPP contract to Mega Consortium",
       "status": "active",
       "date": "2016-12-17T10:00:00-06:00",
-      "relatedBid": "1.0"
+      "relatedBid": "1"
     }
   ]
 }
