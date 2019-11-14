@@ -12,9 +12,9 @@ The OCDS bid extension introduces a new, flexible, top-level section to each con
 
 ## Schema
 
-The `bids/details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
+The `bids.details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
 
-The `bids/statistics` array is used to represent key statistical information about the number of bids and bidders. Each entry in the array is a `BidsStatistic` object containing at least:
+The `bids.statistics` array is used to represent key statistical information about the number of bids and bidders. Each entry in the array is a `BidsStatistic` object containing at least:
 
 * An identifier
 * A measure, from the `bidStatistics.csv` codelist
@@ -139,7 +139,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 * Disallow required fields `BidsStatistic.id`, `BidsStatistic.measure`, `BidsStatistic.value` from being null
 * Disallow `Bids.statistics` from having null in its array of objects
 * Allow `Bids.statistics` to be null
-* Add enum to `BidsStatistic.status`
+* Add enum to `Bid.status`
 * Move `BidsStatistic.requirementResponses` to requirements extension
 * Add descriptions to bidStatus.csv
 * List codelists in extension.json
