@@ -141,9 +141,9 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
-### v1.1.5
+### Unreleased
 
-* Add the `currency` property on `BidsStatistic`
+* Add `BidsStatistic.currency` field
 * Add 'lowestValidBidValue' and 'highestValidBidValue' codes to `bidStatistics.csv`
 
 ### v1.1.4
