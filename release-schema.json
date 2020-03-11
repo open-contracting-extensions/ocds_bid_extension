@@ -57,7 +57,7 @@
         },
         "currency": {
           "title": "Currency",
-          "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist.",
+          "description": "The currency of the amount in the `value` field, from the closed [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist, if the statistic has a monetary value.",
           "type": [
             "string",
             "null"
