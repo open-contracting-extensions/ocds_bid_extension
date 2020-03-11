@@ -12,9 +12,9 @@ The OCDS bid extension introduces a new, flexible, top-level section to each con
 
 ## Schema
 
-The `bids/details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
+The `bids.details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
 
-The `bids/statistics` array is used to represent key statistical information about the number of bids and bidders. Each entry in the array is a `BidsStatistic` object containing at least:
+The `bids.statistics` array is used to represent key statistical information about the number of bids and bidders. Each entry in the array is a `BidsStatistic` object containing at least:
 
 * An identifier
 * A measure, from the `bidStatistics.csv` codelist
@@ -35,29 +35,29 @@ Below is an example of a bids extension:
   "bids": {
     "statistics": [
       {
-        "id": "1.0",
+        "id": "1",
         "measure": "validBids",
         "value": 1,
         "date": "2016-12-09T01:00:00+01:00",
         "notes": "This statistic covers the total number of unique bids received that were considered valid against relevant criteria."
       },
       {
-        "id": "2.0",
+        "id": "2",
         "measure": "disqualifiedBids",
         "value": 1,
         "date": "2016-12-10T01:00:00+01:00",
         "notes": "This statistic covers the total number of unique bids received that were disqualified."
       },
       {
-        "id": "3.0",
+        "id": "3",
         "measure": "highestValidBidValue",
-        "value": 1500,
+        "value": 1000,
         "currency": "USD",
         "date": "2016-12-12T01:00:00+01:00",
         "notes": "This statistic covers the total number of unique bids received that were considered valid against relevant criteria."
       },
       {
-        "id": "4.0",
+        "id": "4",
         "measure": "lowestValidBidValue",
         "value": 1000,
         "currency": "USD",
@@ -67,7 +67,7 @@ Below is an example of a bids extension:
     ],
     "details": [
       {
-        "id": "1.0",
+        "id": "1",
         "date": "2016-12-09T01:00:00+01:00",
         "status": "valid",
         "value": {
@@ -76,15 +76,14 @@ Below is an example of a bids extension:
         },
         "documents": [
           {
-            "id": "1.0",
+            "id": "1",
             "documentType": "evaluationReports",
             "title": "Mega Consortium Bid Evaluation Report",
             "description": "This document provides details of the evaluation of the bid submitted by Mega Consortium",
             "url": "http://communications.gov.example/example_ppp/evaluationReport_megaConsortium.pdf",
             "datePublished": "2016-11-17T10:00:00-06:00",
             "format": "application/pdf",
-            "language": "en",
-            "author": "Ministry of Communications"
+            "language": "en"
           }
         ],
         "tenderers": [
@@ -95,7 +94,7 @@ Below is an example of a bids extension:
         ]
       },
       {
-        "id": "2.0",
+        "id": "2",
         "date": "2016-12-10T01:00:00+01:00",
         "status": "disqualified",
         "value": {
@@ -104,15 +103,14 @@ Below is an example of a bids extension:
         },
         "documents": [
           {
-            "id": "1.0",
+            "id": "1",
             "documentType": "evaluationReports",
             "title": "Beta Consortium Bid Evaluation Report",
             "description": "This document provides details of the evaluation of the bid submitted by Beta Consortium",
             "url": "http://communications.gov.example/example_ppp/evaluationReport_betaConsortium.pdf",
             "datePublished": "2016-11-18T10:00:00-06:00",
             "format": "application/pdf",
-            "language": "en",
-            "author": "Ministry of Communications"
+            "language": "en"
           }
         ],
         "tenderers": [
@@ -131,7 +129,7 @@ Below is an example of a bids extension:
       "description": "Award of Example PPP contract to Mega Consortium",
       "status": "active",
       "date": "2016-12-17T10:00:00-06:00",
-      "relatedBid": "1.0"
+      "relatedBid": "1"
     }
   ]
 }
@@ -157,7 +155,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 * Disallow required fields `BidsStatistic.id`, `BidsStatistic.measure`, `BidsStatistic.value` from being null
 * Disallow `Bids.statistics` from having null in its array of objects
 * Allow `Bids.statistics` to be null
-* Add enum to `BidsStatistic.status`
+* Add enum to `Bid.status`
 * Move `BidsStatistic.requirementResponses` to requirements extension
 * Add descriptions to bidStatus.csv
 * List codelists in extension.json
