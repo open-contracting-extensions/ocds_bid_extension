@@ -47,6 +47,18 @@ Below is an example of a bids extension:
         "value": 1,
         "date": "2016-12-10T01:00:00+01:00",
         "notes": "This statistic covers the total number of unique bids received that were disqualified."
+      },
+      {
+        "id": "3",
+        "measure": "highestValidBidValue",
+        "value": 1000,
+        "currency": "USD"
+      },
+      {
+        "id": "4",
+        "measure": "lowestValidBidValue",
+        "value": 1000,
+        "currency": "USD"
       }
     ],
     "details": [
@@ -124,6 +136,11 @@ Below is an example of a bids extension:
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
 
 ## Changelog
+
+### Unreleased
+
+* Add `BidsStatistic.currency` field
+* Add 'lowestValidBidValue' and 'highestValidBidValue' codes to `bidStatistics.csv`
 
 ### v1.1.4
 
