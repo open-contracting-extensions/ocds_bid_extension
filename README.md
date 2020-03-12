@@ -52,17 +52,13 @@ Below is an example of a bids extension:
         "id": "3",
         "measure": "highestValidBidValue",
         "value": 1000,
-        "currency": "USD",
-        "date": "2016-12-12T01:00:00+01:00",
-        "notes": "This statistic covers the total number of unique bids received that were considered valid against relevant criteria."
+        "currency": "USD"
       },
       {
         "id": "4",
         "measure": "lowestValidBidValue",
         "value": 1000,
-        "currency": "USD",
-        "date": "2016-12-12T01:00:00+01:00",
-        "notes": "This statistic covers the total number of unique bids received that were considered valid against relevant criteria."
+        "currency": "USD"
       }
     ],
     "details": [
