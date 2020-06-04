@@ -31,12 +31,12 @@
       "properties": {
         "id": {
           "title": "ID",
-          "description": "An internal identifier for this statistical item.",
+          "description": "An internal identifier for this statistic.",
           "type": "string"
         },
         "measure": {
           "title": "Measure",
-          "description": "An item from the bidStatistics codelist for the statistic reported in value. This is an open codelist, and other statistics may also be included.",
+          "description": "The statistic reported in the value.",
           "type": "string",
           "codelist": "bidStatistics.csv",
           "openCodelist": true
@@ -57,7 +57,7 @@
         },
         "currency": {
           "title": "Currency",
-          "description": "The currency of the amount in the `value` field, from the closed [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist, if the statistic has a monetary value.",
+          "description": "The currency of the amount in the `value` field, if the statistic has a monetary value.",
           "type": [
             "string",
             "null"
@@ -437,7 +437,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of the bid, drawn from the bidStatus codelist",
+          "description": "The status of the bid.",
           "type": [
             "string",
             "null"
