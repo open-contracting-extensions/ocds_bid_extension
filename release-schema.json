@@ -21,7 +21,7 @@
     },
     "BidsStatistic": {
       "title": "Bid Statistic",
-      "description": "For reporting aggregate statistics about the bids related to a tender. Where lots are in use, statistics may optionally be broken down by lot. ",
+      "description": "For reporting aggregate statistics about the bids related to a tender. Where lots are in use, statistics can be broken down by lot.",
       "type": "object",
       "required": [
         "id",
@@ -43,7 +43,7 @@
         },
         "date": {
           "title": "Date",
-          "description": "The date when this statistic was last updated. This is often the closing date of the tender process. This field can be left blank unless either (a) the same statistic is provided from multiple points in time, or (b) there is a specific local requirement for the date when statistics were calculated to be provided.",
+          "description": "The date when this statistic was last updated. This is often the closing date of the tender process. This field may be omitted unless either (a) the same statistic is provided from multiple points in time, or (b) there is a specific local requirement for the date when statistics were calculated to be provided.",
           "type": [
             "string",
             "null"
@@ -52,7 +52,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "The value for the measure in question. Total counts should be provided as an integer. Percentages should be presented as a proportion of 1 (e.g. 10% = 0.1)",
+          "description": "The value for the measure in question. Total counts should be provided as an integer. Percentages should be provided as a proportion of 1 (e.g. 10% = 0.1)",
           "type": "number"
         },
         "currency": {
@@ -372,7 +372,7 @@
         },
         "notes": {
           "title": "Notes",
-          "description": "Any notes required to understand or interpret the given statistic.",
+          "description": "Any notes needed to understand or interpret the given statistic.",
           "type": [
             "string",
             "null"
@@ -455,7 +455,7 @@
         },
         "tenderers": {
           "title": "Tenderer",
-          "description": "The party, or parties, responsible for this bid. This should provide a name and identifier, cross-referenced to an entry in the parties array at the top level of the release.",
+          "description": "The party, or parties, responsible for this bid.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
