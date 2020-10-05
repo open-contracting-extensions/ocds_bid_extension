@@ -43,19 +43,12 @@ Below is an example of a bids extension:
       },
       {
         "id": "2",
-        "measure": "disqualifiedBids",
-        "value": 1,
-        "date": "2016-12-10T01:00:00+01:00",
-        "notes": "This statistic covers the total number of unique bids received that were disqualified."
-      },
-      {
-        "id": "3",
         "measure": "highestValidBidValue",
         "value": 1000,
         "currency": "USD"
       },
       {
-        "id": "4",
+        "id": "3",
         "measure": "lowestValidBidValue",
         "value": 1000,
         "currency": "USD"
