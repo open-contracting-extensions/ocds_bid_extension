@@ -55,6 +55,14 @@
           "description": "The value for the measure in question. Total counts should be provided as an integer. Percentages should be provided as a proportion of 1 (e.g. 10% = 0.1)",
           "type": "number"
         },
+        "valueGross": {
+          "title": "Gross value",
+          "description": "The monetary value for the measure in question, including all taxes.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
         "currency": {
           "title": "Currency",
           "description": "The currency of the amount in the `value` field, if the statistic has a monetary value.",
