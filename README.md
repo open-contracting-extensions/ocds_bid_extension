@@ -132,7 +132,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ## Changelog
 
-### 1.1.6
+### v1.1.6
 
 * Add `BidsStatistic.valueGross` field
 
