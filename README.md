@@ -45,12 +45,14 @@ Below is an example of a bids extension:
         "id": "2",
         "measure": "highestValidBidValue",
         "value": 1000,
+        "valueGross": 1200,
         "currency": "USD"
       },
       {
         "id": "3",
         "measure": "lowestValidBidValue",
         "value": 1000,
+        "valueGross": 1200,
         "currency": "USD"
       }
     ],
@@ -129,6 +131,10 @@ Below is an example of a bids extension:
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
 
 ## Changelog
+
+### Unreleased
+
+* Add `BidsStatistic.valueGross` field
 
 ### v1.1.5
 
