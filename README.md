@@ -26,6 +26,19 @@ For example, publishers may wish to add statistics on minority or women-owned bu
 
 The codelist's Category column indicates whether the statistic applies to bids or bidders or whether it is specified or required by a particular regulatory context (e.g. EU).
 
+## Guidance
+
+### Correcting a bid value
+
+Procuring entities and, in some jurisdictions, bidders, can correct bid values after a bid is submitted; for example, to correct a purely arithmetic error or a misplaced decimal.
+
+In OCDS:
+
+* The bid value as submitted goes in `Bid/Value`
+* If a correction is made, that bid value is overwritten
+
+To make both the original and corrected values available to data users, implementers can use the [releases and records model](https://standard.open-contracting.org/latest/en/primer/releases_and_records/) to publish a two releases: a release containing the original bid value and second release containing the corrected value.
+
 ## Example
 
 Below is an example of a bids extension:
@@ -135,6 +148,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 ### Unreleased
 
 * Add `BidsStatistic.valueGross` field
+* Add guidance on correcting bid values
 
 ### v1.1.5
 
