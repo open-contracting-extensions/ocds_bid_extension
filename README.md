@@ -34,7 +34,7 @@ Procuring entities and, in some jurisdictions, bidders, can correct bid values a
 
 In OCDS:
 
-* The bid value as submitted goes in `Bid/Value`
+* The bid value as submitted goes in `bids.details.value`
 * If a correction is made, that bid value is overwritten
 
 To make both the original and corrected values available to data users, implementers can use the [releases and records model](https://standard.open-contracting.org/latest/en/primer/releases_and_records/) to publish a two releases: a release containing the original bid value and second release containing the corrected value.
