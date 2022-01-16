@@ -65,18 +65,6 @@ Below is an example of a bids extension:
           "amount": 1000,
           "currency": "USD"
         },
-        "documents": [
-          {
-            "id": "1",
-            "documentType": "evaluationReports",
-            "title": "Mega Consortium Bid Evaluation Report",
-            "description": "This document provides details of the evaluation of the bid submitted by Mega Consortium",
-            "url": "http://communications.gov.example/example_ppp/evaluationReport_megaConsortium.pdf",
-            "datePublished": "2016-11-17T10:00:00-06:00",
-            "format": "application/pdf",
-            "language": "en"
-          }
-        ],
         "tenderers": [
           {
             "id": "MEGA",
@@ -92,18 +80,6 @@ Below is an example of a bids extension:
           "amount": 1500,
           "currency": "USD"
         },
-        "documents": [
-          {
-            "id": "1",
-            "documentType": "evaluationReports",
-            "title": "Beta Consortium Bid Evaluation Report",
-            "description": "This document provides details of the evaluation of the bid submitted by Beta Consortium",
-            "url": "http://communications.gov.example/example_ppp/evaluationReport_betaConsortium.pdf",
-            "datePublished": "2016-11-18T10:00:00-06:00",
-            "format": "application/pdf",
-            "language": "en"
-          }
-        ],
         "tenderers": [
           {
             "id": "BETA",
@@ -135,6 +111,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 ### Unreleased
 
 * Add `BidsStatistic.valueGross` field
+* Remove documents from example
 
 ### v1.1.5
 
