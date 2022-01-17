@@ -461,6 +461,15 @@
             null
           ]
         },
+        "items": {
+          "title": "Items offered by the tenderer",
+          "description": "The goods and services being offered by the tenderers specified in the tenderers block, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Item"
+          },
+          "uniqueItems": true
+        },
         "tenderers": {
           "title": "Tenderer",
           "description": "The party, or parties, responsible for this bid.",

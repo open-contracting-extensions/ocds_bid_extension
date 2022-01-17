@@ -61,6 +61,19 @@ Below is an example of a bids extension:
         "id": "1",
         "date": "2016-12-09T01:00:00+01:00",
         "status": "valid",
+        "items": [
+          {
+            "id": "1",
+            "description": "Installation and operation of the Shared Public Telecommunications Network",
+            "classification": {
+              "scheme": "CPV",
+              "id": "32412100",
+              "description": "Telecommunications network",
+              "uri": "http://purl.org/cpv/2008/code-32412100"
+            },
+            "quantity": 1
+          }
+        ],
         "value": {
           "amount": 1000,
           "currency": "USD"
@@ -135,6 +148,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 ### Unreleased
 
 * Add `BidsStatistic.valueGross` field
+* Add `Bid.items` field
 
 ### v1.1.5
 
