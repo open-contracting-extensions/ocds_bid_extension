@@ -28,16 +28,13 @@ The codelist's Category column indicates whether the statistic applies to bids o
 
 ## Guidance
 
-### Correcting a bid value
+### Correcting a bid's value
 
-Procuring entities and, in some jurisdictions, bidders, can correct bid values after a bid is submitted; for example, to correct a purely arithmetic error or a misplaced decimal.
+Buyers and procuring entities – and, in some jurisdictions, bidders – can correct a bid's value after the bid is submitted: for example, to correct an arithmetical error or a misplaced decimal mark.
 
-In OCDS:
+In OCDS, the bid's value is disclosed via the `bids.details.value` field. If a bid's value is corrected, the value of the `bids.details.value` field is overwritten. As such, the originally submitted value is only available via the contracting process' [change history](https://standard.open-contracting.org/latest/en/primer/releases_and_records/).
 
-* The bid value as submitted goes in `bids.details.value`
-* If a correction is made, that bid value is overwritten
-
-To make both the original and corrected values available to data users, implementers can use the [releases and records model](https://standard.open-contracting.org/latest/en/primer/releases_and_records/) to publish a two releases: a release containing the original bid value and second release containing the corrected value.
+As a publisher, to make both the original and corrected values available to users, publish at least two releases for the contracting process: one release containing the bid's originally submitted value and another containing its corrected value.
 
 ## Example
 
