@@ -10,6 +10,8 @@ Regulatory regimes vary on the extent to which they allow information on bidding
 
 The OCDS bid extension introduces a new, flexible, top-level section to each contracting process to capture bidding information. Implementers will need to assess which fields are applicable to their local regulatory regime, and to local use-cases.
 
+This extension can also be used to publish data on quotes.
+
 ## Schema
 
 The `bids.details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
@@ -121,6 +123,8 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 ### Unreleased
 
 * Add `BidsStatistic.valueGross` field
+* Add `Bid.validityPeriod` field
+* Add `Bid.description` field
 * Add guidance on correcting bid values
 
 ### v1.1.5
