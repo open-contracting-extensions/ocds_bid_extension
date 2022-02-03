@@ -9,13 +9,16 @@
   "definitions": {
     "Award": {
       "properties": {
-        "relatedBid": {
-          "title": "Related bid",
-          "description": "Where bid details are used, a cross reference to the entry in the bids array to which this award relates. Provide the bid identifier here.",
+        "relatedBids": {
+          "title": "Related bids",
+          "description": "Where bid details are used, a cross reference to the entries in the bids array to which this award relates. Provide the bid identifiers here.",
           "type": [
-            "string",
+            "array",
             "null"
-          ]
+          ],
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
