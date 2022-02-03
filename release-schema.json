@@ -421,7 +421,7 @@
     },
     "Bid": {
       "title": "Bid",
-      "description": "For representing a bid in response to the tender or qualification stage in this contracting process.",
+      "description": "For representing a bid or quote in response to the tender or qualification stage in this contracting process.",
       "type": "object",
       "required": [
         "id"
@@ -442,6 +442,14 @@
             "null"
           ],
           "format": "date-time"
+        },
+        "description": {
+          "title": "Description",
+          "description": "A description of this bid. The description field may be used to describe the terms and conditions for the bid.",
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "status": {
           "title": "Status",
@@ -482,6 +490,11 @@
           "title": "Value",
           "description": "The total value of the bid.",
           "$ref": "#/definitions/Value"
+        },
+        "validityPeriod": {
+          "title": "Validity period",
+          "description": "The period for which this bid is valid.",
+          "$ref": "#/definitions/Period"
         },
         "documents": {
           "title": "Documents",
