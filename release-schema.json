@@ -17,7 +17,7 @@
             "null"
           ],
           "deprecated": {
-            "description": "This field is deprecated in favour of `.relatedBids`, to support combining multiple bids into one award.",
+            "description": "This field is deprecated in favor of `relatedBids`, to allow an award to combine multiple bids.",
             "deprecatedVersion": "1.2"
           }
         },

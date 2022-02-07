@@ -124,7 +124,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### Unreleased
 
-* Replace `Award.relatedBid` with `Award.relatedBids`
+* Add `Award.relatedBids` field, and deprecate `Award.relatedBid` field
 * Add `BidsStatistic.valueGross` field
 * Add `Bid.validityPeriod` field
 * Add `Bid.description` field
