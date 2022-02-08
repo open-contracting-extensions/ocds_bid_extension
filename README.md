@@ -121,7 +121,9 @@ Below is an example of a bids extension:
       "description": "Award of Example PPP contract to Mega Consortium",
       "status": "active",
       "date": "2016-12-17T10:00:00-06:00",
-      "relatedBid": "1"
+      "relatedBids": [
+        "1"
+      ]
     }
   ]
 }
@@ -135,6 +137,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### Unreleased
 
+* Add `Award.relatedBids` field, and deprecate `Award.relatedBid` field
 * Add `BidsStatistic.valueGross` field
 * Add `Bid.items` field
 * Add `Bid.validityPeriod` field

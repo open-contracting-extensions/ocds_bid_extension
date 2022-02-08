@@ -15,7 +15,22 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "deprecated": {
+            "description": "This field is deprecated in favor of `relatedBids`, to allow an award to combine multiple bids.",
+            "deprecatedVersion": "1.2"
+          }
+        },
+        "relatedBids": {
+          "title": "Related bids",
+          "description": "Where bid details are used, a cross reference to the entries in the bids array to which this award relates. Provide the bid identifiers here.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
