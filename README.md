@@ -142,6 +142,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 * Add `Bid.items` field
 * Add `Bid.validityPeriod` field
 * Add `Bid.description` field
+* Move `Bid.relatedLots` from the Lots extension
 * Add guidance on correcting bid values
 
 ### v1.1.5
