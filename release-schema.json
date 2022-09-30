@@ -34,9 +34,9 @@
         }
       }
     },
-    "BidsStatistic": {
-      "title": "Bid Statistic",
-      "description": "For reporting aggregate statistics about the bids related to a tender. Where lots are in use, statistics can be broken down by lot.",
+    "Statistic": {
+      "title": "Statistic",
+      "description": "For reporting aggregate statistics related to a tender. Where lots are in use, statistics can be broken down by lot.",
       "type": "object",
       "required": [
         "id",
@@ -53,7 +53,7 @@
           "title": "Measure",
           "description": "The statistic reported in the value.",
           "type": "string",
-          "codelist": "bidStatistics.csv",
+          "codelist": "statistic.csv",
           "openCodelist": true
         },
         "date": {
@@ -403,7 +403,7 @@
         },
         "relatedLot": {
           "title": "Related Lot",
-          "description": "Where lots are in use, if this statistic relates to bids on a particular lot, provide the lot identifier here. If left blank, the statistic will be interpreted as applying to the whole tender.",
+          "description": "Where lots are in use, if this statistic relates to a particular lot, provide the lot identifier here. If left blank, the statistic will be interpreted as applying to the whole tender.",
           "type": [
             "string",
             "null"
@@ -421,7 +421,7 @@
           "description": "Summary statistics on the number and nature of bids received. Where information is provided on individual bids, these statistics should match those that can be calculated from the bid details array.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/BidsStatistic"
+            "$ref": "#/definitions/Statistic"
           }
         },
         "details": {

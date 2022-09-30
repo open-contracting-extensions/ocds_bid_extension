@@ -16,13 +16,13 @@ This extension can also be used to publish data on quotes.
 
 The `bids.details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
 
-The `bids.statistics` array is used to represent key statistical information about the number of bids and bidders. Each entry in the array is a `BidsStatistic` object containing at least:
+The `bids.statistics` array is used to represent key statistical information about the number of bids and bidders. Each entry in the array is a `Statistic` object containing at least:
 
 * An identifier
-* A measure, from the `bidStatistics.csv` codelist
+* A measure, from the `statistic.csv` codelist
 * A value for that measure
 
-The `bidStatistics.csv` codelist is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code.
+The `statistic.csv` codelist is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code.
 
 For example, publishers may wish to add statistics on minority or women-owned businesses, or bids that meet certain environmental standards and targets.
 
@@ -144,6 +144,8 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 * Add `Bid.description` field
 * Move `Bid.relatedLots` from the Lots extension
 * Add guidance on correcting bid values
+* Rename `BidStatistic` object to `Statistic` and remove bid specific language from object field descriptions
+* Rename `bidStatistics.csv` to `statistic.csv`
 
 ### v1.1.5
 
