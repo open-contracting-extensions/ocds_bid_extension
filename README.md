@@ -12,6 +12,10 @@ The OCDS bid extension introduces a new, flexible, top-level section to each con
 
 This extension can also be used to publish data on quotes.
 
+## Legal Context
+
+In the European Union, this extension's fields correspond to [eForms BG-7 (Notice Result), BG-320 (Tender) and BG-310 (Contract)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). See [OCDS for eForms](https://standard.open-contracting.org/profiles/eforms/latest/en/) for the correspondences to eForms fields.
+
 ## Schema
 
 The `bids.details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
@@ -95,7 +99,13 @@ Below is an example of a bids extension:
             "id": "MEGA",
             "name": "Mega Consortium"
           }
-        ]
+        ],
+        "countriesOfOrigin": [
+          "MX"
+        ],
+        "hasRank": true,
+        "rank": 1,
+        "variant": true
       },
       {
         "id": "2",
@@ -110,17 +120,28 @@ Below is an example of a bids extension:
             "id": "BETA",
             "name": "Beta Consortium"
           }
-        ]
+        ],
+        "hasRank": true,
+        "rank": 2
       }
     ]
   },
   "awards": [
     {
-      "id": "111",
+      "id": "1",
       "title": "Example PPP contract award",
       "description": "Award of Example PPP contract to Mega Consortium",
       "status": "active",
       "date": "2016-12-17T10:00:00-06:00",
+      "relatedBids": [
+        "1"
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "id": "1",
+      "awardID": "1",
       "relatedBids": [
         "1"
       ]
@@ -137,6 +158,11 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### Unreleased
 
+* Add `Bid.countriesOfOrigin` field
+* Add `Bid.hasRank` field
+* Add `Bid.rank` field
+* Add `Bid.variant` field
+* Add `Contract.relatedBids` field
 * Add `Award.relatedBids` field, and deprecate `Award.relatedBid` field
 * Add `BidsStatistic.valueGross` field
 * Add `Bid.items` field
