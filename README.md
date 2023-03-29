@@ -14,7 +14,7 @@ This extension can also be used to publish data on quotes.
 
 ## Legal Context
 
-In the European Union, this extension's fields correspond to [eForms BG-7 (Notice Result), BG-320 (Tender) and BG-310 (Contract)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). See [OCDS for eForms](https://standard.open-contracting.org/profiles/eforms/latest/en/) for the correspondences to eForms fields.
+In the European Union, this extension's fields correspond to [BG-320 (Tender) and BT-3202 (Contract Tender ID)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). See [OCDS for eForms](https://standard.open-contracting.org/profiles/eforms/latest/en/) for the correspondences to eForms fields.
 
 ## Schema
 
