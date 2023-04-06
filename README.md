@@ -158,20 +158,21 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### Unreleased
 
-* Add `Bid.countriesOfOrigin` field
-* Add `Bid.hasRank` field
-* Add `Bid.rank` field
-* Add `Bid.variant` field
-* Add `Contract.relatedBids` field
-* Add `Award.relatedBids` field, and deprecate `Award.relatedBid` field
-* Add `BidsStatistic.valueGross` field
-* Add `Bid.items` field
-* Add `Bid.validityPeriod` field
-* Add `Bid.description` field
-* Move `Bid.relatedLots` from the Lots extension
+* Add fields:
+  * `Bid.description`
+  * `Bid.items`
+  * `Bid.hasRank`
+  * `Bid.rank`
+  * `Bid.relatedLots` (moved from the Lots extension)
+  * `Bid.validityPeriod`
+  * `Bid.variant`
+  * `BidsStatistic.valueGross`
+  * `Award.relatedBids`
+  * `Contract.relatedBids`
+* Deprecate the `Award.relatedBid` field
 * Add guidance on correcting bid values
-* Rename `BidStatistic` object to `Statistic` and remove bid specific language from object field descriptions
-* Rename `bidStatistics.csv` to `statistic.csv`
+* Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
+* Rename the `bidStatistics.csv` codelist to `statistic.csv`
 
 ### v1.1.5
 
