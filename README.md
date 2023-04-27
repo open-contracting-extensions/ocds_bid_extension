@@ -12,10 +12,6 @@ The OCDS bid extension introduces a new, flexible, top-level section to each con
 
 This extension can also be used to publish data on quotes.
 
-## Legal Context
-
-In the European Union, this extension's fields correspond to [eForms BG-320 (Tender) and BT-3202 (Contract Tender ID)](https://docs.ted.europa.eu/eforms/latest/reference/business-terms/). See [OCDS for eForms](https://standard.open-contracting.org/profiles/eforms/latest/en/) for correspondences to eForms fields.
-
 ## Schema
 
 The `bids.details` array is used to provide one or more `Bid` objects, each representing a unique bid received.

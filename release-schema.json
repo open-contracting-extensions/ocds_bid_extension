@@ -816,7 +816,7 @@
         },
         "hasRank": {
           "title": "Has rank",
-          "description": "Whether this bid is ranked. For more information, see `.rank`.",
+          "description": "Whether this bid is ranked.",
           "type": [
             "boolean",
             "null"
@@ -832,7 +832,7 @@
         },
         "variant": {
           "title": "Is variant",
-          "description": "Whether the bid is a variant. A variant is a bid that fulfils the buyer's needs in a different way than that expressed in the procurement documents.",
+          "description": "Whether the bid is a variant. A variant is a bid that fulfills the buyer's needs differently than as proposed in the procurement documents.",
           "type": [
             "boolean",
             "null"
