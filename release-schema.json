@@ -460,9 +460,7 @@
         "id": {
           "title": "ID",
           "description": "A local identifier for this bid",
-          "type": [
-            "string"
-          ]
+          "type": "string"
         },
         "date": {
           "title": "Date",
@@ -543,9 +541,7 @@
             "null"
           ],
           "items": {
-            "type": [
-              "string"
-            ]
+            "type": "string"
           }
         },
         "countriesOfOrigin": {
