@@ -13,7 +13,8 @@
   ],
   "codelists": [
     "statistic.csv",
-    "bidStatus.csv"
+    "bidStatus.csv",
+    "country.csv"
   ],
   "schemas": [
     "release-schema.json"

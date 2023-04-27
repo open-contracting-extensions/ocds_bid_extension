@@ -95,7 +95,13 @@ Below is an example of a bids extension:
             "id": "MEGA",
             "name": "Mega Consortium"
           }
-        ]
+        ],
+        "countriesOfOrigin": [
+          "MX"
+        ],
+        "hasRank": true,
+        "rank": 1,
+        "variant": true
       },
       {
         "id": "2",
@@ -110,17 +116,28 @@ Below is an example of a bids extension:
             "id": "BETA",
             "name": "Beta Consortium"
           }
-        ]
+        ],
+        "hasRank": true,
+        "rank": 2
       }
     ]
   },
   "awards": [
     {
-      "id": "111",
+      "id": "1",
       "title": "Example PPP contract award",
       "description": "Award of Example PPP contract to Mega Consortium",
       "status": "active",
       "date": "2016-12-17T10:00:00-06:00",
+      "relatedBids": [
+        "1"
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "id": "1",
+      "awardID": "1",
       "relatedBids": [
         "1"
       ]
@@ -137,15 +154,21 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### Unreleased
 
-* Add `Award.relatedBids` field, and deprecate `Award.relatedBid` field
-* Add `BidsStatistic.valueGross` field
-* Add `Bid.items` field
-* Add `Bid.validityPeriod` field
-* Add `Bid.description` field
-* Move `Bid.relatedLots` from the Lots extension
+* Add fields:
+  * `Bid.description`
+  * `Bid.items`
+  * `Bid.hasRank`
+  * `Bid.rank`
+  * `Bid.relatedLots` (moved from the Lots extension)
+  * `Bid.validityPeriod`
+  * `Bid.variant`
+  * `BidsStatistic.valueGross`
+  * `Award.relatedBids`
+  * `Contract.relatedBids`
+* Deprecate the `Award.relatedBid` field
 * Add guidance on correcting bid values
-* Rename `BidStatistic` object to `Statistic` and remove bid specific language from object field descriptions
-* Rename `bidStatistics.csv` to `statistic.csv`
+* Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
+* Rename the `bidStatistics.csv` codelist to `statistic.csv`
 
 ### v1.1.5
 
