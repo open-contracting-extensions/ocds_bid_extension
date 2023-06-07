@@ -508,7 +508,7 @@
         },
         "tenderers": {
           "title": "Tenderer",
-          "description": "The party, or parties, responsible for this bid.",
+          "description": "The organization(s) responsible for this bid.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
