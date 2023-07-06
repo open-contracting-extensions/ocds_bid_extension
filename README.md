@@ -169,6 +169,11 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 * Add guidance on correcting bid values
 * Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
 * Rename the `bidStatistics.csv` codelist to `statistic.csv`
+* Add codes to `statistic.csv`:
+  * 'microBids'
+  * 'smallBids'
+  * 'mediumBids'
+  * 'disqualifiedBids'
 
 ### v1.1.5
 
