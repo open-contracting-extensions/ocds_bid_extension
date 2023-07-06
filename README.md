@@ -173,7 +173,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'microBids'
   * 'smallBids'
   * 'mediumBids'
-  * 'tendersDisqualified'
+  * 'disqualifiedBids'
 
 ### v1.1.5
 

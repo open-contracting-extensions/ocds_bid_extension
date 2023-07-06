@@ -8,12 +8,12 @@ bidders,bidders,Bidders,The total number of unique organizations or consortia su
 bidders,qualifiedBidders,Qualified bidders,The total number of unique organizations or consortia passing the qualification stage of the evaluation process.
 bidders,disqualifiedBidders,Disqualified bidders,The total number of unique organizations or consortia that did not pass the qualification stage of the evaluation process.
 EU,electronicBids,Electronic bids,The number of bids received by electronic means.
-EU,smeBids,Bids from SMEs,The number of bids received from small and medium-sized enterprises.
-EU,microBids,Bids from micro companies,The number of bids received from micro-sized enterprises.
-EU,smallBids,Bids from small companies,The number of bids received from small-sized enterprises.
-EU,mediumBids,Bids from medium companies,The number of bids received from medium-sized enterprises.
+EU,microBids,Bids from micro companies,The number of bids received from micro enterprises.
+EU,smeBids,Bids from SMEs,The number of bids received from small and medium enterprises.
+EU,smallBids,Bids from small companies,The number of bids received from small enterprises.
+EU,mediumBids,Bids from medium companies,The number of bids received from medium enterprises.
 EU,foreignBids,Bids from foreign firms,The number of bids received from bidders from outside the country where the tender is issued.
 EU,foreignBidsFromEU,Bids from firms in other European Economic Area countries,The number of bids received from tenderers from other European Economic Area countries.
 EU,foreignBidsFromNonEU,Bids from firms in non-European Economic Area countries,The number of bids received from tenderers from non-European Economic Area countries.
 EU,tendersAbnormallyLow,Tenders excluded because they were abnormally low,"The number of tenders excluded because they were abnormally low. Note that in some EU datasets this might have been converted from a boolean, such that a value of 1 would indicate ""1 or more"" tenders were excluded. Users need to evaluate and interpret data accordingly."
-EU,tendersDisqualified,Excluded tenders,"The number of tenders that were found inadmissible. A tender is found inadmissible where it has been verified that it has been submitted by a tenderer who has been excluded or who did not meet the selection criteria, or when it is not in conformity with the technical specifications, or is irregular (e.g. it was received late, having an abnormally low price or cost), unacceptable or unsuitable."
+EU,disqualifiedBids,Disqualified bids,"The number of bids that were found inadmissible. A bid is found inadmissible where it has been verified that it has been submitted by a tenderer who has been excluded or who did not meet the selection criteria, or when it is not in conformity with the technical specifications, or is irregular (e.g. it was received late, having an abnormally low price or cost), unacceptable or unsuitable."
