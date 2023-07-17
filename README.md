@@ -165,6 +165,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * `BidsStatistic.valueGross`
   * `Award.relatedBids`
   * `Contract.relatedBids`
+  * `Bid.identifiers`
 * Deprecate the `Award.relatedBid` field
 * Add guidance on correcting bid values
 * Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
