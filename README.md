@@ -73,6 +73,12 @@ Below is an example of a bids extension:
         "id": "1",
         "date": "2016-12-09T01:00:00+01:00",
         "status": "valid",
+        "identifiers": [
+          {
+            "id": "bid-123-456",
+            "scheme": "internal"
+          }
+        ],
         "items": [
           {
             "id": "1",
@@ -155,6 +161,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 ### Unreleased
 
 * Add fields:
+  * `Bid.identifiers`
   * `Bid.description`
   * `Bid.items`
   * `Bid.hasRank`
@@ -165,7 +172,6 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * `BidsStatistic.valueGross`
   * `Award.relatedBids`
   * `Contract.relatedBids`
-  * `Bid.identifiers`
 * Deprecate the `Award.relatedBid` field
 * Add guidance on correcting bid values
 * Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions

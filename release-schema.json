@@ -19,8 +19,7 @@
           "deprecated": {
             "description": "This field is deprecated in favor of `relatedBids`, to allow an award to combine multiple bids.",
             "deprecatedVersion": "1.2"
-          },
-          "minLength": 1
+          }
         },
         "relatedBids": {
           "title": "Related bids",
@@ -30,11 +29,8 @@
             "null"
           ],
           "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "minItems": 1,
-          "uniqueItems": true
+            "type": "string"
+          }
         }
       }
     },
@@ -48,11 +44,8 @@
             "null"
           ],
           "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "minItems": 1,
-          "uniqueItems": true
+            "type": "string"
+          }
         }
       }
     },
@@ -69,16 +62,14 @@
         "id": {
           "title": "ID",
           "description": "An internal identifier for this statistic.",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "measure": {
           "title": "Measure",
           "description": "The statistic reported in the value.",
           "type": "string",
           "codelist": "statistic.csv",
-          "openCodelist": true,
-          "minLength": 1
+          "openCodelist": true
         },
         "date": {
           "title": "Date",
@@ -423,8 +414,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "relatedLot": {
           "title": "Related Lot",
@@ -432,11 +422,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "Bids": {
       "title": "Bids",
@@ -449,9 +437,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Statistic"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "details": {
           "title": "Bid details",
@@ -459,12 +445,9 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Bid"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         }
-      },
-      "minProperties": 1
+      }
     },
     "Bid": {
       "title": "Bid",
@@ -488,8 +471,7 @@
             "$ref": "#/definitions/SimpleIdentifier"
           },
           "wholeListMerge": true,
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "date": {
           "title": "Date",
@@ -506,8 +488,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "status": {
           "title": "Status",
@@ -534,8 +515,7 @@
           "items": {
             "$ref": "#/definitions/Item"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "tenderers": {
           "title": "Tenderer",
@@ -543,9 +523,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+          }
         },
         "value": {
           "title": "Value",
@@ -564,8 +542,7 @@
           "items": {
             "$ref": "#/definitions/Document"
           },
-          "uniqueItems": true,
-          "minItems": 1
+          "uniqueItems": true
         },
         "relatedLots": {
           "title": "Related lot(s)",
@@ -575,11 +552,8 @@
             "null"
           ],
           "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "minItems": 1,
-          "uniqueItems": true
+            "type": "string"
+          }
         },
         "countriesOfOrigin": {
           "title": "Countries of origin",
@@ -845,9 +819,7 @@
           },
           "codelist": "country.csv",
           "openCodelist": false,
-          "minLength": 1,
-          "minItems": 1,
-          "uniqueItems": true
+          "minLength": 1
         },
         "hasRank": {
           "title": "Has rank",
@@ -873,8 +845,7 @@
             "null"
           ]
         }
-      },
-      "minProperties": 1
+      }
     },
     "SimpleIdentifier": {
       "title": "Simple identifier",
@@ -887,8 +858,7 @@
           "type": [
             "string",
             "null"
-          ],
-          "minLength": 1
+          ]
         },
         "id": {
           "title": "ID",
@@ -896,12 +866,9 @@
           "type": [
             "string",
             "null"
-          ],
-          "versionId": true,
-          "minLength": 1
+          ]
         }
-      },
-      "minProperties": 1
+      }
     }
   }
 }
