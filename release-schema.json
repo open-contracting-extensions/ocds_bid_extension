@@ -460,8 +460,7 @@
         "id": {
           "title": "ID",
           "description": "A local identifier for this bid",
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "identifiers": {
           "title": "Identifiers",
@@ -471,7 +470,8 @@
             "$ref": "#/definitions/SimpleIdentifier"
           },
           "wholeListMerge": true,
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         },
         "date": {
           "title": "Date",
@@ -858,7 +858,8 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "minLength": 1
         },
         "id": {
           "title": "ID",
@@ -866,9 +867,12 @@
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "versionId": true,
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     }
   }
 }
