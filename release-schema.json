@@ -819,7 +819,7 @@
           },
           "codelist": "country.csv",
           "openCodelist": false,
-          "minLength": 1
+          "minItems": 1
         },
         "hasRank": {
           "title": "Has rank",

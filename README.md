@@ -164,6 +164,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * `Bid.identifiers`
   * `Bid.description`
   * `Bid.items`
+  * `Bid.countriesOfOrigin`
   * `Bid.hasRank`
   * `Bid.rank`
   * `Bid.relatedLots` (moved from the Lots extension)
