@@ -182,6 +182,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'smallBids'
   * 'mediumBids'
   * 'disqualifiedBids'
+* Update and clarify `Statistic.value` field description.
 
 ### v1.1.5
 
