@@ -10,7 +10,7 @@ Regulatory regimes vary on the extent to which they allow information on bidding
 
 The OCDS bid extension introduces a new, flexible, top-level section to each contracting process to capture bidding information. Implementers will need to assess which fields are applicable to their local regulatory regime, and to local use-cases.
 
-This extension can also be used to publish data on quotes.
+This extension can also be used to publish data on quotes and pre-qualification submissions.
 
 ## Schema
 
@@ -38,7 +38,11 @@ In OCDS, the bid's value is disclosed via the `bids.details.value` field. If a b
 
 As a publisher, to make both the original and corrected values available to users, publish at least two releases for the contracting process: one release containing the bid's originally submitted value and another containing its corrected value.
 
-## Example
+### Publishing pre-qualification responses
+
+Buyers and procuring entities may wish to publish details of responses they receive during a pre-qualification phase of a contracting process. This extension can be used to model this, treating each response as equivalent to a bid, and using the `bids.details` array to record their information.
+
+## Examples
 
 Below is an example of a bids extension:
 
@@ -152,6 +156,57 @@ Below is an example of a bids extension:
 }
 ```
 
+The following JSON snippet shows how this extension can be used to model data on received requests to participate. The first response has been evaluated and found to meet the necessary criteria, the second response has been received but not evaluated.
+
+```json
+{
+  "bids": {
+    "details": [
+      {
+        "id": "1",
+        "date": "2016-12-09T01:00:00+01:00",
+        "status": "valid",
+        "description": "Request to participate submission detailing how the bidder meets the eligibility criteria laid out in the pre-qualification phase notice.",
+        "tenderers": [
+          {
+            "id": "MEGA",
+            "name": "Mega Consortium"
+          }
+        ],
+        "countriesOfOrigin": [
+          "MX"
+        ],
+        "documents": [
+          {
+            "id": "doc-1",
+            "documentType": "eligibilityCriteria",
+            "title": "Request to participate - evidence of eligibility."
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "date": "2016-12-10T01:00:00+01:00",
+        "status": "pending",
+        "tenderers": [
+          {
+            "id": "BETA",
+            "name": "Beta Consortium"
+          }
+        ],
+        "documents": [
+          {
+            "id": "doc-2",
+            "documentType": "eligibilityCriteria",
+            "title": "Request to participate - evidence of eligibility."
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
@@ -182,6 +237,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'smallBids'
   * 'mediumBids'
   * 'disqualifiedBids'
+* Add guidance on publishing pre-qualification data
 
 ### v1.1.5
 
