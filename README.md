@@ -10,7 +10,7 @@ Regulatory regimes vary on the extent to which they allow information on bidding
 
 The OCDS bid extension introduces a new, flexible, top-level section to each contracting process to capture bidding information. Implementers will need to assess which fields are applicable to their local regulatory regime, and to local use-cases.
 
-This extension can also be used to publish data on quotes and pre-qualification submissions.
+This extension can also be used to publish data on quotes and pre-qualification responses.
 
 ## Schema
 
