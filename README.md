@@ -238,6 +238,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'mediumBids'
   * 'disqualifiedBids'
 * Add guidance on publishing pre-qualification data
+* Update and clarify `Statistic.value` field description.
 
 ### v1.1.5
 

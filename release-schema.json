@@ -82,7 +82,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "The value for the measure in question. Total counts should be provided as an integer. Percentages should be provided as a proportion of 1 (e.g. 10% = 0.1)",
+          "description": "The value for the measure in question. A total count should be expressed as an integer. A proportion should be expressed as a decimal (for example, 0.1) and not as a percentage (for example, 10).",
           "type": "number"
         },
         "valueGross": {
