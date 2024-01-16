@@ -156,7 +156,7 @@ Below is an example of a bids extension:
 }
 ```
 
-The following JSON snippet shows how this extension can be used to model data on received requests to participate. The first response has been evaluated and found to meet the necessary criteria, the second response has been received but not evaluated.
+The following JSON snippet shows how this extension can be used to model data on received expressions of interest. The first response has been evaluated and found to meet the necessary criteria, the second response has been received but not evaluated.
 
 ```json
 {
@@ -166,7 +166,7 @@ The following JSON snippet shows how this extension can be used to model data on
         "id": "1",
         "date": "2016-12-09T01:00:00+01:00",
         "status": "valid",
-        "description": "Request to participate submission detailing how the bidder meets the eligibility criteria laid out in the pre-qualification phase notice.",
+        "description": "Expression of interest submission detailing how the bidder meets the eligibility criteria laid out in the pre-qualification phase notice.",
         "tenderers": [
           {
             "id": "MEGA",
@@ -180,7 +180,7 @@ The following JSON snippet shows how this extension can be used to model data on
           {
             "id": "doc-1",
             "documentType": "eligibilityCriteria",
-            "title": "Request to participate - evidence of eligibility."
+            "title": "Expression of interest - evidence of eligibility."
           }
         ]
       },
@@ -198,7 +198,7 @@ The following JSON snippet shows how this extension can be used to model data on
           {
             "id": "doc-2",
             "documentType": "eligibilityCriteria",
-            "title": "Request to participate - evidence of eligibility."
+            "title": "Expression of interest - evidence of eligibility."
           }
         ]
       }
