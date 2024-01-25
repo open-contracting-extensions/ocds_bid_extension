@@ -38,9 +38,17 @@ In OCDS, the bid's value is disclosed via the `bids.details.value` field. If a b
 
 As a publisher, to make both the original and corrected values available to users, publish at least two releases for the contracting process: one release containing the bid's originally submitted value and another containing its corrected value.
 
-## Example
+### Bids submitted for multiple lots
 
-Below is an example of a bids extension:
+In some cases, potential suppliers can submit bids for multiple lots. Regardless of whether the bids take the form of a single document or multiple documents, OCDS models the "bid" for each lot as a separate object, to improve interoperability.
+
+If a potential supplier submits a bid for multiple lots as a single document, for each lot, add a `Bid` object to the `bids.details` array. Set the object's `identifiers` to the bid's identifier, and add the lot's identifier to the object's `relatedLots`.
+
+If the bid cannot be divided (for example, the data source describes only the total value of the bid, and not the individual value for each lot within the bid), create one `Bid` object, and add all lots' identifiers to the object's `relatedLots`.
+
+## Examples
+
+A publisher uses the bid extension to record both details of the individual bids submitted and some aggregate statistics once the award has been made.
 
 ```json
 {
@@ -149,6 +157,63 @@ Below is an example of a bids extension:
       ]
     }
   ]
+}
+```
+
+A potential supplier submits a bid for two lots as a single document. The publisher records this as two Bid objects.
+
+```json
+{
+  "bids": {
+    "details": [
+      {
+        "id": "1",
+        "date": "2016-12-09T01:00:00+01:00",
+        "identifiers": [
+          {
+            "id": "ABC-1350",
+            "scheme": "internal"
+          }
+        ],
+        "value": {
+          "amount": 1000,
+          "currency": "USD"
+        },
+        "tenderers": [
+          {
+            "id": "MEGA",
+            "name": "Mega Consortium"
+          }
+        ],
+        "relatedLots": [
+          "LOT-0001"
+        ]
+      },
+      {
+        "id": "2",
+        "date": "2016-12-09T01:00:00+01:00",
+        "identifiers": [
+          {
+            "id": "ABC-1350",
+            "scheme": "internal"
+          }
+        ],
+        "value": {
+          "amount": 500,
+          "currency": "USD"
+        },
+        "tenderers": [
+          {
+            "id": "MEGA",
+            "name": "Mega Consortium"
+          }
+        ],
+        "relatedLots": [
+          "LOT-0002"
+        ]
+      }
+    ]
+  }
 }
 ```
 
