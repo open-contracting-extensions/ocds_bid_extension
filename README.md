@@ -248,6 +248,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'mediumBids'
   * 'disqualifiedBids'
 * Update and clarify `Statistic.value` field description.
+* Add guidance on dividing bids for multiple lots
 
 ### v1.1.5
 
