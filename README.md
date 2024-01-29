@@ -42,13 +42,13 @@ As a publisher, to make both the original and corrected values available to user
 
 In some cases, potential suppliers can submit bids for multiple lots. Regardless of whether the bids take the form of a single document or multiple documents, OCDS models the "bid" for each lot as a separate object, to improve interoperability.
 
-If a potential supplier submits a bid for multiple lots as a single document, for each lot, add a `Bid` object to the `bids.details` array. Set the object's `identifiers` to the bid's identifier, and add the lot's identifier to the object's `relatedLots`.
+If a potential supplier submits a bid for multiple lots as a single document, for each lot, add a `Bid` object to the `bids.details` array. Add the bid's identifier to the object's `identifiers` array, and add the lot's identifier to the object's `relatedLots` array.
 
 If the bid cannot be divided (for example, the data source describes only the total value of the bid, and not the individual value for each lot within the bid), create one `Bid` object, and add all lots' identifiers to the object's `relatedLots`.
 
 ## Examples
 
-A publisher uses the bid extension to record both details of the individual bids submitted and some aggregate statistics once the award has been made.
+Aggregate post-award statistics and individual bid submissions:
 
 ```json
 {
@@ -160,7 +160,7 @@ A publisher uses the bid extension to record both details of the individual bids
 }
 ```
 
-A potential supplier submits a bid for two lots as a single document. The publisher records this as two Bid objects.
+A potential supplier submits a bid for two lots as a single document:
 
 ```json
 {
@@ -247,7 +247,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'smallBids'
   * 'mediumBids'
   * 'disqualifiedBids'
-* Update and clarify `Statistic.value` field description.
+* Update and clarify `Statistic.value` field description
 * Add guidance on dividing bids for multiple lots
 
 ### v1.1.5
