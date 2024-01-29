@@ -38,9 +38,17 @@ In OCDS, the bid's value is disclosed via the `bids.details.value` field. If a b
 
 As a publisher, to make both the original and corrected values available to users, publish at least two releases for the contracting process: one release containing the bid's originally submitted value and another containing its corrected value.
 
-## Example
+### Bids submitted for multiple lots
 
-Below is an example of a bids extension:
+In some cases, potential suppliers can submit bids for multiple lots. Regardless of whether the bids take the form of a single document or multiple documents, OCDS models the "bid" for each lot as a separate object, to improve interoperability.
+
+If a potential supplier submits a bid for multiple lots as a single document, for each lot, add a `Bid` object to the `bids.details` array. Add the bid's identifier to the object's `identifiers` array, and add the lot's identifier to the object's `relatedLots` array.
+
+If the bid cannot be divided (for example, the data source describes only the total value of the bid, and not the individual value for each lot within the bid), create one `Bid` object, and add all lots' identifiers to the object's `relatedLots`.
+
+## Examples
+
+Aggregate post-award statistics and individual bid submissions:
 
 ```json
 {
@@ -152,6 +160,63 @@ Below is an example of a bids extension:
 }
 ```
 
+A potential supplier submits a bid for two lots as a single document:
+
+```json
+{
+  "bids": {
+    "details": [
+      {
+        "id": "1",
+        "date": "2016-12-09T01:00:00+01:00",
+        "identifiers": [
+          {
+            "id": "ABC-1350",
+            "scheme": "internal"
+          }
+        ],
+        "value": {
+          "amount": 1000,
+          "currency": "USD"
+        },
+        "tenderers": [
+          {
+            "id": "MEGA",
+            "name": "Mega Consortium"
+          }
+        ],
+        "relatedLots": [
+          "LOT-0001"
+        ]
+      },
+      {
+        "id": "2",
+        "date": "2016-12-09T01:00:00+01:00",
+        "identifiers": [
+          {
+            "id": "ABC-1350",
+            "scheme": "internal"
+          }
+        ],
+        "value": {
+          "amount": 500,
+          "currency": "USD"
+        },
+        "tenderers": [
+          {
+            "id": "MEGA",
+            "name": "Mega Consortium"
+          }
+        ],
+        "relatedLots": [
+          "LOT-0002"
+        ]
+      }
+    ]
+  }
+}
+```
+
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
@@ -182,7 +247,8 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'smallBids'
   * 'mediumBids'
   * 'disqualifiedBids'
-* Update and clarify `Statistic.value` field description.
+* Update and clarify `Statistic.value` field description
+* Add guidance on dividing bids for multiple lots
 
 ### v1.1.5
 
