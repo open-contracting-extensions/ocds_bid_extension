@@ -451,7 +451,7 @@
     },
     "Bid": {
       "title": "Bid",
-      "description": "For representing a bid or quote in response to the tender or qualification stage in this contracting process.",
+      "description": "For representing a bid in response to the tender or qualification stage in this contracting process. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation.",
       "type": "object",
       "required": [
         "id"
