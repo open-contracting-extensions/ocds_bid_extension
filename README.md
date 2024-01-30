@@ -30,7 +30,7 @@ The codelist's Category column indicates whether the statistic applies to bids o
 
 ## Guidance
 
-### Correcting a bid's value
+### Correct a bid's value
 
 Buyers and procuring entities – and, in some jurisdictions, bidders – can correct a bid's value after the bid is submitted: for example, to correct an arithmetical error or a misplaced decimal mark.
 
@@ -239,16 +239,17 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * `Award.relatedBids`
   * `Contract.relatedBids`
 * Deprecate the `Award.relatedBid` field
-* Add guidance on correcting bid values
-* Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
-* Rename the `bidStatistics.csv` codelist to `statistic.csv`
+* Add guidance:
+  * Correct a bid's value
+  * Bids submitted for multiple lots
 * Add codes to `statistic.csv`:
   * 'microBids'
   * 'smallBids'
   * 'mediumBids'
   * 'disqualifiedBids'
 * Update and clarify `Statistic.value` field description
-* Add guidance on dividing bids for multiple lots
+* Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
+* Rename the `bidStatistics.csv` codelist to `statistic.csv`
 
 ### v1.1.5
 
