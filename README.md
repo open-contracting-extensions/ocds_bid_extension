@@ -30,7 +30,7 @@ The codelist's Category column indicates whether the statistic applies to bids o
 
 ## Guidance
 
-### Correcting a bid's value
+### Correct a bid's value
 
 Buyers and procuring entities – and, in some jurisdictions, bidders – can correct a bid's value after the bid is submitted: for example, to correct an arithmetical error or a misplaced decimal mark.
 
@@ -46,9 +46,9 @@ If a potential supplier submits a bid for multiple lots as a single document, fo
 
 If the bid cannot be divided (for example, the data source describes only the total value of the bid, and not the individual value for each lot within the bid), create one `Bid` object, and add all lots' identifiers to the object's `relatedLots`.
 
-### Publishing pre-qualification responses
+### Publish expressions of interest
 
-Buyers and procuring entities may wish to publish details of responses they receive during a pre-qualification phase of a contracting process. This extension can be used to model this, treating each response as equivalent to a bid, and using the `bids.details` array to record their information.
+Buyers and procuring entities can publish expressions of interest, which are received during pre-qualification or pre-selection, in the `bids.details` array.
 
 ## Examples
 
