@@ -1,4 +1,4 @@
-# Bid statistics and details
+# Bids and expressions of interest
 
 Information about bids is important for many use cases, including:
 
