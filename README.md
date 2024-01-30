@@ -1,16 +1,14 @@
 # Bid statistics and details
 
-Information on bids submitted as part of a contracting process is important for many forms of analysis, including:
+Information about bids is important for many use cases, including:
 
-* Market analysis for understanding the competitiveness of a given marketplace;
-* Red flag analysis for understanding potential corruption risks; and
-* Value for money analysis;
+* Market analysis, to understand competition
+* Red flag analysis, to monitor corruption risk
+* Value for money analysis
 
-Regulatory regimes vary on the extent to which they allow information on bidding to be proactively published, and at what point in the procurement process. In some systems and processes, a list of invited bidders is published at the start of tendering, and full details and documents on the bids received are disclosed when evaluation is complete. In other systems, only summary statistics on the number of bids received is made public.
+This extension introduces a top-level `bids` object to describe individual bids and aggregate statistics.
 
-The OCDS bid extension introduces a new, flexible, top-level section to each contracting process to capture bidding information. Implementers will need to assess which fields are applicable to their local regulatory regime, and to local use-cases.
-
-This extension can also be used to publish data on quotes.
+Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation. Regulatory regimes vary on the extent to which they allow information about bids to be proactively published, and at what point in the procurement process. In some systems and processes, a list of invited bidders is published in a tender notice, and full details on the bids received are published in an award notice. In other systems, only summary statistics, like the number of bids received, is published.
 
 ## Schema
 
