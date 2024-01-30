@@ -3,7 +3,7 @@
     "en": "Bid statistics and details"
   },
   "description": {
-    "en": "Allowing bid statistics, and detailed bid information to be represented."
+    "en": "Adds a bids object to describe individual bids and aggregate statistics."
   },
   "documentationUrl": {
     "en": "https://extensions.open-contracting.org/en/extensions/bids/"
