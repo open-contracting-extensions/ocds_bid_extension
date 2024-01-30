@@ -1,4 +1,4 @@
-# Bid statistics and details
+# Bids and expressions of interest
 
 Information about bids is important for many use cases, including:
 
@@ -9,6 +9,8 @@ Information about bids is important for many use cases, including:
 This extension introduces a top-level `bids` object to describe individual bids and aggregate statistics.
 
 Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation. Regulatory regimes vary on the extent to which they allow information about bids to be proactively published, and at what point in the procurement process. In some systems and processes, a list of invited bidders is published in a tender notice, and full details on the bids received are published in an award notice. In other systems, only summary statistics, like the number of bids received, is published.
+
+This extension can also be used to publish information about expressions of interest – also called requests to participate.
 
 ## Schema
 
@@ -43,6 +45,10 @@ In some cases, potential suppliers can submit bids for multiple lots. Regardless
 If a potential supplier submits a bid for multiple lots as a single document, for each lot, add a `Bid` object to the `bids.details` array. Add the bid's identifier to the object's `identifiers` array, and add the lot's identifier to the object's `relatedLots` array.
 
 If the bid cannot be divided (for example, the data source describes only the total value of the bid, and not the individual value for each lot within the bid), create one `Bid` object, and add all lots' identifiers to the object's `relatedLots`.
+
+### Publish expressions of interest
+
+Buyers and procuring entities can publish expressions of interest, which are received during pre-qualification or pre-selection, in the `bids.details` array.
 
 ## Examples
 
@@ -215,6 +221,58 @@ A potential supplier submits a bid for two lots as a single document:
 }
 ```
 
+A first expression of interest was evaluated and meets the qualification criteria. A second response was received, but is not yet evaluated.
+
+
+```json
+{
+  "bids": {
+    "details": [
+      {
+        "id": "1",
+        "date": "2016-12-09T01:00:00+01:00",
+        "status": "valid",
+        "description": "Expression of interest submission detailing how the bidder meets the eligibility criteria laid out in the pre-qualification phase notice.",
+        "tenderers": [
+          {
+            "id": "MEGA",
+            "name": "Mega Consortium"
+          }
+        ],
+        "countriesOfOrigin": [
+          "MX"
+        ],
+        "documents": [
+          {
+            "id": "doc-1",
+            "documentType": "eligibilityCriteria",
+            "title": "Expression of interest - evidence of eligibility."
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "date": "2016-12-10T01:00:00+01:00",
+        "status": "pending",
+        "tenderers": [
+          {
+            "id": "BETA",
+            "name": "Beta Consortium"
+          }
+        ],
+        "documents": [
+          {
+            "id": "doc-2",
+            "documentType": "eligibilityCriteria",
+            "title": "Expression of interest - evidence of eligibility."
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
@@ -240,6 +298,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 * Add guidance:
   * Correct a bid's value
   * Bids submitted for multiple lots
+  * Publish expressions of interest
 * Add codes to `statistic.csv`:
   * 'microBids'
   * 'smallBids'
