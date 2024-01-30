@@ -38,13 +38,21 @@ In OCDS, the bid's value is disclosed via the `bids.details.value` field. If a b
 
 As a publisher, to make both the original and corrected values available to users, publish at least two releases for the contracting process: one release containing the bid's originally submitted value and another containing its corrected value.
 
+### Bids submitted for multiple lots
+
+In some cases, potential suppliers can submit bids for multiple lots. Regardless of whether the bids take the form of a single document or multiple documents, OCDS models the "bid" for each lot as a separate object, to improve interoperability.
+
+If a potential supplier submits a bid for multiple lots as a single document, for each lot, add a `Bid` object to the `bids.details` array. Add the bid's identifier to the object's `identifiers` array, and add the lot's identifier to the object's `relatedLots` array.
+
+If the bid cannot be divided (for example, the data source describes only the total value of the bid, and not the individual value for each lot within the bid), create one `Bid` object, and add all lots' identifiers to the object's `relatedLots`.
+
 ### Publishing pre-qualification responses
 
 Buyers and procuring entities may wish to publish details of responses they receive during a pre-qualification phase of a contracting process. This extension can be used to model this, treating each response as equivalent to a bid, and using the `bids.details` array to record their information.
 
 ## Examples
 
-Below is an example of a bids extension:
+Aggregate post-award statistics and individual bid submissions:
 
 ```json
 {
@@ -156,7 +164,65 @@ Below is an example of a bids extension:
 }
 ```
 
-The following JSON snippet shows how this extension can be used to model data on received expressions of interest. The first response has been evaluated and found to meet the necessary criteria, the second response has been received but not evaluated.
+A potential supplier submits a bid for two lots as a single document:
+
+```json
+{
+  "bids": {
+    "details": [
+      {
+        "id": "1",
+        "date": "2016-12-09T01:00:00+01:00",
+        "identifiers": [
+          {
+            "id": "ABC-1350",
+            "scheme": "internal"
+          }
+        ],
+        "value": {
+          "amount": 1000,
+          "currency": "USD"
+        },
+        "tenderers": [
+          {
+            "id": "MEGA",
+            "name": "Mega Consortium"
+          }
+        ],
+        "relatedLots": [
+          "LOT-0001"
+        ]
+      },
+      {
+        "id": "2",
+        "date": "2016-12-09T01:00:00+01:00",
+        "identifiers": [
+          {
+            "id": "ABC-1350",
+            "scheme": "internal"
+          }
+        ],
+        "value": {
+          "amount": 500,
+          "currency": "USD"
+        },
+        "tenderers": [
+          {
+            "id": "MEGA",
+            "name": "Mega Consortium"
+          }
+        ],
+        "relatedLots": [
+          "LOT-0002"
+        ]
+      }
+    ]
+  }
+}
+```
+
+A first expression of interest was evaluated and meets the qualification criteria. A second response was received, but is not yet evaluated.
+
 
 ```json
 {
@@ -229,16 +295,18 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * `Award.relatedBids`
   * `Contract.relatedBids`
 * Deprecate the `Award.relatedBid` field
-* Add guidance on correcting bid values
-* Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
-* Rename the `bidStatistics.csv` codelist to `statistic.csv`
+* Add guidance:
+  * Correct a bid's value
+  * Bids submitted for multiple lots
+  * Publish expressions of interest
 * Add codes to `statistic.csv`:
   * 'microBids'
   * 'smallBids'
   * 'mediumBids'
   * 'disqualifiedBids'
-* Add guidance on publishing pre-qualification data
-* Update and clarify `Statistic.value` field description.
+* Update and clarify `Statistic.value` field description
+* Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
+* Rename the `bidStatistics.csv` codelist to `statistic.csv`
 
 ### v1.1.5
 
