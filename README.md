@@ -236,18 +236,18 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * `BidsStatistic.valueGross`
   * `Award.relatedBids`
   * `Contract.relatedBids`
-* Deprecate the `Award.relatedBid` field
-* Add guidance:
-  * Correct a bid's value
-  * Bids submitted for multiple lots
 * Add codes to `statistic.csv`:
   * 'microBids'
   * 'smallBids'
   * 'mediumBids'
   * 'disqualifiedBids'
+* Deprecate the `Award.relatedBid` field
 * Update and clarify `Statistic.value` field description
 * Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
 * Rename the `bidStatistics.csv` codelist to `statistic.csv`
+* Add guidance:
+  * Correct a bid's value
+  * Bids submitted for multiple lots
 
 ### v1.1.5
 
