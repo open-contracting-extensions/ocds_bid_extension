@@ -241,17 +241,13 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * `Bid.hasRank`
   * `Bid.rank`
   * `Bid.relatedLots` (moved from the Lots extension)
+  * `Bid.submissionType`
   * `Bid.validityPeriod`
   * `Bid.variant`
   * `BidsStatistic.valueGross`
   * `Award.relatedBids`
   * `Contract.relatedBids`
-  * `Bid.submissionType`
-* Deprecate the `Award.relatedBid` field
-* Add guidance:
-  * Correct a bid's value
-  * Bids submitted for multiple lots
-  * Publish expressions of interest
+* Add `submissionType.csv` codelist
 * Add codes to `statistic.csv`:
   * 'microBids'
   * 'smallBids'
@@ -261,7 +257,10 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 * Update and clarify `Statistic.value` field description
 * Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
 * Rename the `bidStatistics.csv` codelist to `statistic.csv`
-* Add `submissionType.csv` codelist
+* Add guidance:
+  * Correct a bid's value
+  * Bids submitted for multiple lots
+  * Publish expressions of interest
 
 ### v1.1.5
 
