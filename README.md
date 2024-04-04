@@ -6,27 +6,27 @@ Information about bids is important for many use cases, including:
 * Red flag analysis, to monitor corruption risk
 * Value for money analysis
 
-This extension introduces a top-level `bids` object to describe individual bids and aggregate statistics.
+This extension introduces a top-level `bids` object to describe individual bids and expressions of interest (also called requests to participate), and aggregate statistics.
 
 Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation. Regulatory regimes vary on the extent to which they allow information about bids to be proactively published, and at what point in the procurement process. In some systems and processes, a list of invited bidders is published in a tender notice, and full details on the bids received are published in an award notice. In other systems, only summary statistics, like the number of bids received, is published.
 
-This extension can also be used to publish information about expressions of interest – also called requests to participate.
-
 ## Schema
 
-The `bids.details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
+### Bids and expressions of interest
 
-The `bids.statistics` array is used to represent key statistical information about the number of bids and bidders. Each entry in the array is a `Statistic` object containing at least:
+The `bids.details` array contains one or more `Bid` objects, each representing a unique bid or expression of interest.
+
+### Aggregate statistics
+
+The `bids.statistics` array contains statistical information about the number of bidders, bids and expressions of interest. Each entry in the array is a `Statistic` object containing at least:
 
 * An identifier
 * A measure, from the `statistic.csv` codelist
 * A value for that measure
 
-The `statistic.csv` codelist is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code.
+The `statistic.csv` codelist is an **open** codelist. Publishers can add their own codes for additional statistics to this codelist: for example, for the number of bids from minority or women-owned businesses. Publishers are encouraged to engage with the OCDS community to agree upon the definitions of new codes.
 
-For example, publishers may wish to add statistics on minority or women-owned businesses, or bids that meet certain environmental standards and targets.
-
-The codelist's Category column indicates whether the statistic applies to bids or bidders or whether it is specified or required by a particular regulatory context (e.g. EU).
+The codelist's Category column indicates whether the statistic applies to bidders, bids or expressions of interest, or whether it is specified or required by a particular regulatory context (e.g. EU).
 
 ## Guidance
 
