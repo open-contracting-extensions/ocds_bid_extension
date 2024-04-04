@@ -257,6 +257,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'smallBids'
   * 'mediumBids'
   * 'disqualifiedBids'
+* Deprecate the `Award.relatedBid` field
 * Update and clarify `Statistic.value` field description
 * Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
 * Rename the `bidStatistics.csv` codelist to `statistic.csv`
