@@ -14,7 +14,8 @@
   "codelists": [
     "statistic.csv",
     "bidStatus.csv",
-    "country.csv"
+    "country.csv",
+    "submissionType.csv"
   ],
   "schemas": [
     "release-schema.json"

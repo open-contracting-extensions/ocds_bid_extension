@@ -473,6 +473,21 @@
           "uniqueItems": true,
           "minItems": 1
         },
+        "submissionType": {
+          "title": "Submission type",
+          "description": "The type of the submission, using the closed [submissionType](https://github.com/open-contracting-extensions/ocds_bid_extension/blob/master/codelists/submissionType.csv) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "submissionType.csv",
+          "openCodelist": false,
+          "enum": [
+            "expressionOfInterest",
+            "bid",
+            null
+          ]
+        },
         "date": {
           "title": "Date",
           "description": "The date when this bid was received.",

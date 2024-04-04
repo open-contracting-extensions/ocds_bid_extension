@@ -48,7 +48,7 @@ If the bid cannot be divided (for example, the data source describes only the to
 
 ### Publish expressions of interest
 
-Buyers and procuring entities can publish expressions of interest, which are received during pre-qualification or pre-selection, in the `bids.details` array.
+Buyers and procuring entities can publish expressions of interest, which are received during pre-qualification or pre-selection, in the `bids.details` array. Use the `bids.details.submissionType` field to indicate if the published data refer to a bid or an expression of interest.
 
 ## Examples
 
@@ -91,6 +91,7 @@ Aggregate post-award statistics and individual bid submissions:
             "scheme": "internal"
           }
         ],
+        "submissionType": "bid",
         "items": [
           {
             "id": "1",
@@ -125,6 +126,7 @@ Aggregate post-award statistics and individual bid submissions:
         "id": "2",
         "date": "2016-12-10T01:00:00+01:00",
         "status": "disqualified",
+        "submissionType": "bid",
         "value": {
           "amount": 1500,
           "currency": "USD"
@@ -164,7 +166,7 @@ Aggregate post-award statistics and individual bid submissions:
 }
 ```
 
-A potential supplier submits a bid for two lots as a single document:
+A potential supplier submits an expression of interest for two lots as a single document:
 
 ```json
 {
@@ -179,6 +181,7 @@ A potential supplier submits a bid for two lots as a single document:
             "scheme": "internal"
           }
         ],
+        "submissionType": "expressionOfInterest",
         "value": {
           "amount": 1000,
           "currency": "USD"
@@ -202,6 +205,7 @@ A potential supplier submits a bid for two lots as a single document:
             "scheme": "internal"
           }
         ],
+        "submissionType": "expressionOfInterest",
         "value": {
           "amount": 500,
           "currency": "USD"
@@ -214,58 +218,6 @@ A potential supplier submits a bid for two lots as a single document:
         ],
         "relatedLots": [
           "LOT-0002"
-        ]
-      }
-    ]
-  }
-}
-```
-
-A first expression of interest was evaluated and meets the qualification criteria. A second response was received, but is not yet evaluated.
-
-
-```json
-{
-  "bids": {
-    "details": [
-      {
-        "id": "1",
-        "date": "2016-12-09T01:00:00+01:00",
-        "status": "valid",
-        "description": "Expression of interest submission detailing how the bidder meets the eligibility criteria laid out in the pre-qualification phase notice.",
-        "tenderers": [
-          {
-            "id": "MEGA",
-            "name": "Mega Consortium"
-          }
-        ],
-        "countriesOfOrigin": [
-          "MX"
-        ],
-        "documents": [
-          {
-            "id": "doc-1",
-            "documentType": "eligibilityCriteria",
-            "title": "Expression of interest - evidence of eligibility."
-          }
-        ]
-      },
-      {
-        "id": "2",
-        "date": "2016-12-10T01:00:00+01:00",
-        "status": "pending",
-        "tenderers": [
-          {
-            "id": "BETA",
-            "name": "Beta Consortium"
-          }
-        ],
-        "documents": [
-          {
-            "id": "doc-2",
-            "documentType": "eligibilityCriteria",
-            "title": "Expression of interest - evidence of eligibility."
-          }
         ]
       }
     ]
@@ -294,6 +246,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * `BidsStatistic.valueGross`
   * `Award.relatedBids`
   * `Contract.relatedBids`
+  * `Bid.submissionType`
 * Deprecate the `Award.relatedBid` field
 * Add guidance:
   * Correct a bid's value
@@ -307,6 +260,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 * Update and clarify `Statistic.value` field description
 * Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
 * Rename the `bidStatistics.csv` codelist to `statistic.csv`
+* Add `submissionType.csv` codelist
 
 ### v1.1.5
 
