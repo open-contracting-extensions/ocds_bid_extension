@@ -2,7 +2,7 @@
   "properties": {
     "bids": {
       "title": "Bids",
-      "description": "The bid section is used to publish summary statistics, and where applicable, individual bid information.",
+      "description": "Information about individual bids and expressions of interest, and aggregate statistics.",
       "$ref": "#/definitions/Bids"
     }
   },
@@ -23,7 +23,7 @@
         },
         "relatedBids": {
           "title": "Related bids",
-          "description": "Where bid details are used, a cross reference to the entries in the bids array to which this award relates. Provide the bid identifiers here.",
+          "description": "The identifiers of the bids or expressions of interest to which the award relates.",
           "type": [
             "array",
             "null"
@@ -38,7 +38,7 @@
       "properties": {
         "relatedBids": {
           "title": "Related bids",
-          "description": "Where bid details are used, a cross reference to the entries in the bids array to which this contract relates. Provide the bid identifiers here.",
+          "description": "The identifiers of the bids or expressions of interest to which the contract relates.",
           "type": [
             "array",
             "null"
@@ -61,7 +61,7 @@
       "properties": {
         "id": {
           "title": "ID",
-          "description": "An internal identifier for this statistic.",
+          "description": "An internal identifier for the statistic.",
           "type": "string"
         },
         "measure": {
@@ -73,7 +73,7 @@
         },
         "date": {
           "title": "Date",
-          "description": "The date when this statistic was last updated. This is often the closing date of the tender process. This field may be omitted unless either (a) the same statistic is provided from multiple points in time, or (b) there is a specific local requirement for the date when statistics were calculated to be provided.",
+          "description": "The date when the statistic was last updated. This is often the closing date of the tender process. This field may be omitted unless either (a) the same statistic is provided from multiple points in time, or (b) there is a specific local requirement for the date when statistics were calculated to be provided.",
           "type": [
             "string",
             "null"
@@ -418,7 +418,7 @@
         },
         "relatedLot": {
           "title": "Related Lot",
-          "description": "Where lots are in use, if this statistic relates to a particular lot, provide the lot identifier here. If left blank, the statistic will be interpreted as applying to the whole tender.",
+          "description": "The identifiers of the lots to which the statistic relates. If left blank, the statistic will be interpreted as applying to the whole tender.",
           "type": [
             "string",
             "null"
@@ -428,12 +428,12 @@
     },
     "Bids": {
       "title": "Bids",
-      "description": "Summary and detailed information about bids received and evaluated as part of this contracting process.",
+      "description": "Information about bids and expressions of interest received and evaluated as part of this contracting process.",
       "type": "object",
       "properties": {
         "statistics": {
           "title": "Statistics",
-          "description": "Summary statistics on the number and nature of bids received. Where information is provided on individual bids, these statistics should match those that can be calculated from the bid details array.",
+          "description": "Summary statistics on the number and nature of bids and expressions of interest received. Where information is provided on individual submissions, these statistics should match those that can be calculated from the bid details array.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Statistic"
@@ -441,7 +441,7 @@
         },
         "details": {
           "title": "Bid details",
-          "description": "An array of bids, providing information on the bidders, and where applicable, bid status, bid values and related documents. The extent to which this information can be disclosed varies from jurisdiction to jurisdiction.",
+          "description": "The individual bids and expressions of interest, providing information on the submitting parties, and where applicable, status, values and related documents. The extent to which this information can be disclosed varies from jurisdiction to jurisdiction.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Bid"
@@ -451,7 +451,7 @@
     },
     "Bid": {
       "title": "Bid",
-      "description": "For representing a bid in response to the tender or qualification stage in this contracting process. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation.",
+      "description": "The bid or expression of interest in response to the tender or qualification stage in this contracting process. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation.",
       "type": "object",
       "required": [
         "id"
@@ -459,7 +459,7 @@
       "properties": {
         "id": {
           "title": "ID",
-          "description": "A local identifier for this bid",
+          "description": "A local identifier for the bid or expression of interest.",
           "type": "string"
         },
         "identifiers": {
@@ -490,7 +490,7 @@
         },
         "date": {
           "title": "Date",
-          "description": "The date when this bid was received.",
+          "description": "The date when the bid or expression of interest was received.",
           "type": [
             "string",
             "null"
@@ -499,7 +499,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "A description of this bid. The description field may be used to describe the terms and conditions for the bid.",
+          "description": "A description of the bid or expression of interest. The description field may be used to describe the terms and conditions for the submission.",
           "type": [
             "string",
             "null"
@@ -507,7 +507,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of the bid.",
+          "description": "The status of the bid or expression of interest.",
           "type": [
             "string",
             "null"
@@ -534,7 +534,7 @@
         },
         "tenderers": {
           "title": "Tenderer",
-          "description": "The organization(s) responsible for this bid.",
+          "description": "The organization(s) responsible for the bid or expression of interest.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -542,17 +542,17 @@
         },
         "value": {
           "title": "Value",
-          "description": "The total value of the bid.",
+          "description": "The total value of the bid or expression of interest.",
           "$ref": "#/definitions/Value"
         },
         "validityPeriod": {
           "title": "Validity period",
-          "description": "The period for which this bid is valid.",
+          "description": "The period for which the bid or expression of interest is valid.",
           "$ref": "#/definitions/Period"
         },
         "documents": {
           "title": "Documents",
-          "description": "All documents and attachments related to the bid and its evaluation.",
+          "description": "All documents and attachments related to the bid or expression of interest and its evaluation.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
@@ -561,7 +561,7 @@
         },
         "relatedLots": {
           "title": "Related lot(s)",
-          "description": "The identifiers of the lots to which this bid relates.",
+          "description": "The identifiers of the lots to which the bid or expression of interest relates.",
           "type": [
             "array",
             "null"
@@ -572,7 +572,7 @@
         },
         "countriesOfOrigin": {
           "title": "Countries of origin",
-          "description": "The countries of origin of the items in this bid, from the closed country codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+          "description": "The countries of origin of the items in the bid or expression of interest, from the closed country codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
           "type": [
             "array",
             "null"
@@ -838,7 +838,7 @@
         },
         "hasRank": {
           "title": "Has rank",
-          "description": "Whether this bid is ranked.",
+          "description": "Whether the bid is ranked.",
           "type": [
             "boolean",
             "null"
@@ -846,7 +846,7 @@
         },
         "rank": {
           "title": "Rank",
-          "description": "The position of this bid (i.e. whether the bid is ranked first, second, third, etc.) in a design contest, a framework agreement with multiple winners (e.g. cascades), an innovation partnership, a competitive dialogue, or another procedure.",
+          "description": "The position of the bid (i.e. whether the bid is ranked first, second, third, etc.) in a design contest, a framework agreement with multiple winners (e.g. cascades), an innovation partnership, a competitive dialogue, or another procedure.",
           "type": [
             "integer",
             "null"

@@ -166,7 +166,7 @@ Aggregate post-award statistics and individual bid submissions:
 }
 ```
 
-A potential supplier submits an expression of interest for two lots as a single document:
+A potential supplier submits a bid for two lots as a single document:
 
 ```json
 {
@@ -181,7 +181,7 @@ A potential supplier submits an expression of interest for two lots as a single 
             "scheme": "internal"
           }
         ],
-        "submissionType": "expressionOfInterest",
+        "submissionType": "bid",
         "value": {
           "amount": 1000,
           "currency": "USD"
@@ -205,7 +205,7 @@ A potential supplier submits an expression of interest for two lots as a single 
             "scheme": "internal"
           }
         ],
-        "submissionType": "expressionOfInterest",
+        "submissionType": "bid",
         "value": {
           "amount": 500,
           "currency": "USD"
