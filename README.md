@@ -252,6 +252,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'disqualifiedBids'
   * 'electronicBids'
   * 'microBids'
+  * 'smeBids'
   * 'smallBids'
   * 'mediumBids'
   * 'foreignBids'
