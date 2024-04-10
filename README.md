@@ -248,6 +248,14 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 * Add guidance:
   * Correct a bid's value
   * Bids submitted for multiple lots
+* Change category in `statistic.csv` from 'EU' to 'bids':
+  * 'disqualifiedBids'
+  * 'electronicBids'
+  * 'microBids'
+  * 'smeBids'
+  * 'smallBids'
+  * 'mediumBids'
+  * 'foreignBids'
 
 ### v1.1.5
 
