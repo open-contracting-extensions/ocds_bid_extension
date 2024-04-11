@@ -15,7 +15,7 @@
         },
         "details": {
           "title": "Bid details",
-          "description": "The individual bids and expressions of interest, providing information on the submitting parties, and where applicable, status, values and related documents. The extent to which this information can be disclosed varies from jurisdiction to jurisdiction.",
+          "description": "Information about individual bids and expressions of interest.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Bid"
