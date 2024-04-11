@@ -3,7 +3,25 @@
     "bids": {
       "title": "Bids",
       "description": "Information about individual bids and expressions of interest, and aggregate statistics.",
-      "$ref": "#/definitions/Bids"
+      "type": "object",
+      "properties": {
+        "statistics": {
+          "title": "Statistics",
+          "description": "Summary statistics on the number and nature of bids and expressions of interest received. Where information is provided on individual submissions, these statistics should match those that can be calculated from the bid details array.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Statistic"
+          }
+        },
+        "details": {
+          "title": "Bid details",
+          "description": "The individual bids and expressions of interest, providing information on the submitting parties, and where applicable, status, values and related documents. The extent to which this information can be disclosed varies from jurisdiction to jurisdiction.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Bid"
+          }
+        }
+      }
     }
   },
   "definitions": {
@@ -423,29 +441,6 @@
             "string",
             "null"
           ]
-        }
-      }
-    },
-    "Bids": {
-      "title": "Bids",
-      "description": "Information about bids and expressions of interest received and evaluated as part of this contracting process.",
-      "type": "object",
-      "properties": {
-        "statistics": {
-          "title": "Statistics",
-          "description": "Summary statistics on the number and nature of bids and expressions of interest received. Where information is provided on individual submissions, these statistics should match those that can be calculated from the bid details array.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Statistic"
-          }
-        },
-        "details": {
-          "title": "Bid details",
-          "description": "The individual bids and expressions of interest, providing information on the submitting parties, and where applicable, status, values and related documents. The extent to which this information can be disclosed varies from jurisdiction to jurisdiction.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Bid"
-          }
         }
       }
     },
