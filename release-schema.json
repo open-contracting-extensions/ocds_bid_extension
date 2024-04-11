@@ -11,7 +11,7 @@
       "properties": {
         "relatedBid": {
           "title": "Related bid",
-          "description": "Where bid details are used, a cross reference to the entry in the bids array to which this award relates. Provide the bid identifier here.",
+          "description": "The identifiers of the bids (or expressions of interest) to which the contract relates.",
           "type": [
             "string",
             "null"
@@ -23,7 +23,7 @@
         },
         "relatedBids": {
           "title": "Related bids",
-          "description": "The identifiers of the bids or expressions of interest to which the award relates.",
+          "description": "The identifiers of the bids (or expressions of interest) to which the award relates.",
           "type": [
             "array",
             "null"
@@ -38,7 +38,7 @@
       "properties": {
         "relatedBids": {
           "title": "Related bids",
-          "description": "The identifiers of the bids or expressions of interest to which the contract relates.",
+          "description": "The identifiers of the bids (or expressions of interest) to which the contract relates.",
           "type": [
             "array",
             "null"
