@@ -1,7 +1,7 @@
 {
   "properties": {
     "bids": {
-      "title": "Bids",
+      "title": "Submissions",
       "description": "Information about individual bids and expressions of interest, and summary statistics.",
       "type": "object",
       "properties": {
@@ -14,7 +14,7 @@
           }
         },
         "details": {
-          "title": "Bid details",
+          "title": "Submission details",
           "description": "Information about individual bids and expressions of interest.",
           "type": "array",
           "items": {
@@ -445,7 +445,7 @@
       }
     },
     "Bid": {
-      "title": "Bid",
+      "title": "Submission",
       "description": "The bid or expression of interest in response to the tender or qualification stage in this contracting process. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation.",
       "type": "object",
       "required": [
