@@ -446,7 +446,7 @@
     },
     "Bid": {
       "title": "Submission",
-      "description": "The bid or expression of interest in response to the tender or qualification stage in this contracting process. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation.",
+      "description": "A bid or expression of interest. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation. An expression of interest is also called a request to participate.",
       "type": "object",
       "required": [
         "id"
