@@ -253,6 +253,10 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'smallBids'
   * 'mediumBids'
   * 'disqualifiedBids'
+* Change category in `statistic.csv` from 'EU' to 'bids':
+  * 'electronicBids'
+  * 'smeBids'
+  * 'foreignBids'
 * Deprecate the `Award.relatedBid` field
 * Update and clarify `Statistic.value` field description
 * Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
@@ -261,14 +265,6 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * Correct a bid's value
   * Bids submitted for multiple lots
   * Publish expressions of interest
-* Change category in `statistic.csv` from 'EU' to 'bids':
-  * 'disqualifiedBids'
-  * 'electronicBids'
-  * 'microBids'
-  * 'smeBids'
-  * 'smallBids'
-  * 'mediumBids'
-  * 'foreignBids'
 
 ### v1.1.5
 
