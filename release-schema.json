@@ -7,7 +7,7 @@
       "properties": {
         "statistics": {
           "title": "Statistics",
-          "description": "Summary statistics on the number and nature of bids and expressions of interest received. Where information is provided on individual submissions, these statistics should match those that can be calculated from the bid details array.",
+          "description": "Summary statistics on the number and nature of bids and expressions of interest received.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Statistic"
