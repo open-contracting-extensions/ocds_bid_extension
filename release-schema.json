@@ -69,7 +69,7 @@
     },
     "Statistic": {
       "title": "Statistic",
-      "description": "For reporting aggregate statistics related to a tender. Where lots are in use, statistics can be broken down by lot.",
+      "description": "A summary statistic related to a contracting process.",
       "type": "object",
       "required": [
         "id",
