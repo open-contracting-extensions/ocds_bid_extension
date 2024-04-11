@@ -6,7 +6,7 @@ Information about bids is important for many use cases, including:
 * Red flag analysis, to monitor corruption risk
 * Value for money analysis
 
-This extension introduces a top-level `bids` object to describe individual bids and expressions of interest (also called requests to participate), and aggregate statistics.
+This extension introduces a top-level `bids` object to describe individual bids and expressions of interest (also called requests to participate), and summary statistics.
 
 Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation. Regulatory regimes vary on the extent to which they allow information about bids to be proactively published, and at what point in the procurement process. In some systems and processes, a list of invited bidders is published in a tender notice, and full details on the bids received are published in an award notice. In other systems, only summary statistics, like the number of bids received, is published.
 
@@ -16,7 +16,7 @@ Depending on the procedure, a bid can be an estimate, offer, proposal, quote or 
 
 The `bids.details` array contains one or more `Bid` objects, each representing a unique bid or expression of interest.
 
-### Aggregate statistics
+### Summary statistics
 
 The `bids.statistics` array contains statistical information about the number of bidders, bids and expressions of interest. Each entry in the array is a `Statistic` object containing at least:
 
@@ -52,7 +52,7 @@ Expressions of interest are also disclosed in the `bids.details` array. Use the 
 
 ## Examples
 
-Aggregate post-award statistics and individual bid submissions:
+Post-award statistics and bid submissions:
 
 ```json
 {

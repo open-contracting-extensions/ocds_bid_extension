@@ -2,7 +2,7 @@
   "properties": {
     "bids": {
       "title": "Bids",
-      "description": "Information about individual bids and expressions of interest, and aggregate statistics.",
+      "description": "Information about individual bids and expressions of interest, and summary statistics.",
       "type": "object",
       "properties": {
         "statistics": {
