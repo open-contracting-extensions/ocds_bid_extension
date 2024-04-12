@@ -1,4 +1,4 @@
-# Bid statistics and details
+# Bids and expressions of interest
 
 Information about bids is important for many use cases, including:
 
@@ -6,25 +6,27 @@ Information about bids is important for many use cases, including:
 * Red flag analysis, to monitor corruption risk
 * Value for money analysis
 
-This extension introduces a top-level `bids` object to describe individual bids and aggregate statistics.
+This extension introduces a top-level `bids` object to describe individual bids and expressions of interest (also called requests to participate), and summary statistics.
 
 Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation. Regulatory regimes vary on the extent to which they allow information about bids to be proactively published, and at what point in the procurement process. In some systems and processes, a list of invited bidders is published in a tender notice, and full details on the bids received are published in an award notice. In other systems, only summary statistics, like the number of bids received, is published.
 
 ## Schema
 
-The `bids.details` array is used to provide one or more `Bid` objects, each representing a unique bid received.
+### Bids and expressions of interest
 
-The `bids.statistics` array is used to represent key statistical information about the number of bids and bidders. Each entry in the array is a `Statistic` object containing at least:
+The `bids.details` array contains one or more `Bid` objects, each representing a unique bid or expression of interest.
+
+### Summary statistics
+
+The `bids.statistics` array contains statistical information about the number of bidders, bids and expressions of interest. Each entry in the array is a `Statistic` object containing at least:
 
 * An identifier
 * A measure, from the `statistic.csv` codelist
 * A value for that measure
 
-The `statistic.csv` codelist is an **open** codelist. Publishers can add their own codes to this list. When doing so, publishers are encouraged to engage with the open contracting community to agree upon definitions of each code.
+The `statistic.csv` codelist is an **open** codelist. Publishers can add their own codes for additional statistics to this codelist: for example, for the number of bids from minority or women-owned businesses. Publishers are encouraged to engage with the OCDS community to agree upon the definitions of new codes.
 
-For example, publishers may wish to add statistics on minority or women-owned businesses, or bids that meet certain environmental standards and targets.
-
-The codelist's Category column indicates whether the statistic applies to bids or bidders or whether it is specified or required by a particular regulatory context (e.g. EU).
+The codelist's Category column indicates whether the statistic applies to bidders, bids or expressions of interest, or whether it is specified or required by a particular regulatory context (e.g. EU).
 
 ## Guidance
 
@@ -44,9 +46,13 @@ If a potential supplier submits a bid for multiple lots as a single document, fo
 
 If the bid cannot be divided (for example, the data source describes only the total value of the bid, and not the individual value for each lot within the bid), create one `Bid` object, and add all lots' identifiers to the object's `relatedLots`.
 
+### Expressions of interest
+
+Expressions of interest are also disclosed in the `bids.details` array. Use the `bids.details.submissionType` field to indicate whether a submission is a bid or an expression of interest.
+
 ## Examples
 
-Aggregate post-award statistics and individual bid submissions:
+Post-award statistics and bid submissions:
 
 ```json
 {
@@ -85,6 +91,7 @@ Aggregate post-award statistics and individual bid submissions:
             "scheme": "internal"
           }
         ],
+        "submissionType": "bid",
         "items": [
           {
             "id": "1",
@@ -119,6 +126,7 @@ Aggregate post-award statistics and individual bid submissions:
         "id": "2",
         "date": "2016-12-10T01:00:00+01:00",
         "status": "disqualified",
+        "submissionType": "bid",
         "value": {
           "amount": 1500,
           "currency": "USD"
@@ -173,6 +181,7 @@ A potential supplier submits a bid for two lots as a single document:
             "scheme": "internal"
           }
         ],
+        "submissionType": "bid",
         "value": {
           "amount": 1000,
           "currency": "USD"
@@ -196,6 +205,7 @@ A potential supplier submits a bid for two lots as a single document:
             "scheme": "internal"
           }
         ],
+        "submissionType": "bid",
         "value": {
           "amount": 500,
           "currency": "USD"
@@ -231,16 +241,22 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * `Bid.hasRank`
   * `Bid.rank`
   * `Bid.relatedLots` (moved from the Lots extension)
+  * `Bid.submissionType`
   * `Bid.validityPeriod`
   * `Bid.variant`
   * `BidsStatistic.valueGross`
   * `Award.relatedBids`
   * `Contract.relatedBids`
+* Add `submissionType.csv` codelist
 * Add codes to `statistic.csv`:
   * 'microBids'
   * 'smallBids'
   * 'mediumBids'
   * 'disqualifiedBids'
+* Change category in `statistic.csv` from 'EU' to 'bids':
+  * 'electronicBids'
+  * 'smeBids'
+  * 'foreignBids'
 * Deprecate the `Award.relatedBid` field
 * Update and clarify `Statistic.value` field description
 * Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
@@ -248,14 +264,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 * Add guidance:
   * Correct a bid's value
   * Bids submitted for multiple lots
-* Change category in `statistic.csv` from 'EU' to 'bids':
-  * 'disqualifiedBids'
-  * 'electronicBids'
-  * 'microBids'
-  * 'smeBids'
-  * 'smallBids'
-  * 'mediumBids'
-  * 'foreignBids'
+  * Expressions of interest
 
 ### v1.1.5
 
@@ -268,16 +277,16 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 * Fix the title and description of the 'foreignBidsFromEU' code to refer to the European Economic Area (EEA). Previously, its title referred to the European Single Market, but its description listed the members of the EEA.
 * Add a 'foreignBidsFromNonEU' code to `bidStatistics.csv`
-* Remove invalid `required` property on array field `Bids.details`
-* Fix the merge behavior of `Bids.statistics` and `Bid.tenderers` to use identifier merge strategy
+* Remove invalid `required` property on array field `bids.details`
+* Fix the merge behavior of `bids.statistics` and `Bid.tenderers` to use identifier merge strategy
 * Remove Sphinx directives from readme
 * Update extension.json for Extension Explorer
 
 ### v1.1.3
 
 * Disallow required fields `BidsStatistic.id`, `BidsStatistic.measure`, `BidsStatistic.value` from being null
-* Disallow `Bids.statistics` from having null in its array of objects
-* Allow `Bids.statistics` to be null
+* Disallow `bids.statistics` from having null in its array of objects
+* Allow `bids.statistics` to be null
 * Add enum to `Bid.status`
 * Move `BidsStatistic.requirementResponses` to requirements extension
 * Add descriptions to bidStatus.csv
