@@ -7,7 +7,7 @@
       "properties": {
         "statistics": {
           "title": "Statistics",
-          "description": "Summary statistics on the number and nature of bids and expressions of interest received.",
+          "description": "Summary statistics about the number of bidders, bids and expressions of interest.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Statistic"
@@ -69,7 +69,7 @@
     },
     "Statistic": {
       "title": "Statistic",
-      "description": "A summary statistic related to a contracting process.",
+      "description": "A summary statistic related to the contracting process.",
       "type": "object",
       "required": [
         "id",

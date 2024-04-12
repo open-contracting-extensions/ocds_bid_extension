@@ -264,7 +264,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 * Add guidance:
   * Correct a bid's value
   * Bids submitted for multiple lots
-  * Publish expressions of interest
+  * Expressions of interest
 
 ### v1.1.5
 
