@@ -459,7 +459,7 @@
         },
         "identifiers": {
           "title": "Identifiers",
-          "description": "Identifiers for this bid. This field can be used to provide internal identifiers for the bid, such as identifiers from a buyer's document management system or procurement system.",
+          "description": "Identifiers for this bid or expression of interest. This field can be used to provide internal identifiers for the submission, such as identifiers from a buyer's document management system or procurement system.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/SimpleIdentifier"
@@ -537,7 +537,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "The total value of the bid or expression of interest.",
+          "description": "The total value of the bid (or expression of interest).",
           "$ref": "#/definitions/Value"
         },
         "validityPeriod": {
