@@ -244,7 +244,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * `Bid.submissionType`
   * `Bid.validityPeriod`
   * `Bid.variant`
-  * `BidsStatistic.valueGross`
+  * `Statistic.valueGross`
   * `Award.relatedBids`
   * `Contract.relatedBids`
 * Add `submissionType.csv` codelist
@@ -259,7 +259,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'foreignBids'
 * Deprecate the `Award.relatedBid` field
 * Update and clarify `Statistic.value` field description
-* Rename the `BidStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
+* Rename the `BidsStatistic` definition to `Statistic`, and remove bid-specific language from its fields' descriptions
 * Rename the `bidStatistics.csv` codelist to `statistic.csv`
 * Add guidance:
   * Correct a bid's value
@@ -268,7 +268,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### v1.1.5
 
-* Add `BidsStatistic.currency` field
+* Add `currency` field to `BidsStatistic`
 * Add 'lowestValidBidValue' and 'highestValidBidValue' codes to `bidStatistics.csv`
 * Remove type information from field descriptions
 * Review normative and non-normative words
@@ -284,7 +284,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 
 ### v1.1.3
 
-* Disallow required fields `BidsStatistic.id`, `BidsStatistic.measure`, `BidsStatistic.value` from being null
+* Disallow required fields `id`, `measure`, `value` in `BidsStatistic` from being null
 * Disallow `bids.statistics` from having null in its array of objects
 * Allow `bids.statistics` to be null
 * Add enum to `Bid.status`
