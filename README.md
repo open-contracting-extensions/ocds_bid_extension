@@ -247,13 +247,13 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * `Statistic.valueGross`
   * `Award.relatedBids`
   * `Contract.relatedBids`
-* Add `submissionType.csv` codelist
-* Add codes to `statistic.csv`:
+* Add a `submissionType.csv` codelist for `Bid.submissionType`
+* Add codes to the `statistic.csv` codelist:
   * 'microBids'
   * 'smallBids'
   * 'mediumBids'
   * 'disqualifiedBids'
-* Change category in `statistic.csv` from 'EU' to 'bids':
+* Change Category in the `statistic.csv` codelist from 'EU' to 'bids':
   * 'electronicBids'
   * 'smeBids'
   * 'foreignBids'
@@ -269,14 +269,14 @@ Report issues for this extension in the [ocds-extensions repository](https://git
 ### v1.1.5
 
 * Add `currency` field to `BidsStatistic`
-* Add 'lowestValidBidValue' and 'highestValidBidValue' codes to `bidStatistics.csv`
+* Add 'lowestValidBidValue' and 'highestValidBidValue' codes to the `bidStatistics.csv` codelist
 * Remove type information from field descriptions
 * Review normative and non-normative words
 
 ### v1.1.4
 
 * Fix the title and description of the 'foreignBidsFromEU' code to refer to the European Economic Area (EEA). Previously, its title referred to the European Single Market, but its description listed the members of the EEA.
-* Add a 'foreignBidsFromNonEU' code to `bidStatistics.csv`
+* Add 'foreignBidsFromNonEU' code to the `bidStatistics.csv` codelist
 * Remove invalid `required` property on array field `bids.details`
 * Fix the merge behavior of `bids.statistics` and `Bid.tenderers` to use identifier merge strategy
 * Remove Sphinx directives from readme
