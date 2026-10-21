@@ -252,6 +252,7 @@ Report issues for this extension in the [ocds-extensions repository](https://git
   * 'microBids'
   * 'smallBids'
   * 'mediumBids'
+  * 'largeBids'
   * 'disqualifiedBids'
 * Change Category in the `statistic.csv` codelist from 'EU' to 'bids':
   * 'electronicBids'
